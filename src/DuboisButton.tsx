@@ -1,20 +1,23 @@
 // @ts-nocheck
-
 import "@databricks/design-system/dist/index.css";
-import React, { MouseEventHandler } from "react";
-import { Button, DesignSystemProvider } from "@databricks/design-system";
+import "@databricks/design-system/dist/index-dark.css";
+import React from "react";
+import {
+  Button,
+  Switch,
+  DesignSystemProvider,
+} from "@databricks/design-system";
 
-type Props = {
-  onClick: MouseEventHandler;
-  text: string;
-};
-
-const DuboisButton = () => (
-  <>
-    <DesignSystemProvider>
-      <Button type="primary">{React.version}</Button>
-    </DesignSystemProvider>
-  </>
-);
-
-export default DuboisButton;
+export function DuboisButton() {
+  return (
+    <div>
+      <DesignSystemProvider>
+        <Button>asdfasdf</Button>
+        <div style={{ display: "flex", alignItems: "center" }}>
+          <Switch defaultChecked />
+          <label>Label</label>
+        </div>
+      </DesignSystemProvider>
+    </div>
+  );
+}

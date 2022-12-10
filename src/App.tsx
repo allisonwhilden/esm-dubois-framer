@@ -1,5 +1,5 @@
 import React from "react";
-import DuboisButton from "./DuboisButton";
+import { DuboisButton } from "./DuboisButton";
 
 function App() {
   return (
