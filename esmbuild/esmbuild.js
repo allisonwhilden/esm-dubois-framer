@@ -3,7 +3,6 @@ const esbuild = require("esbuild");
 const globby = require("globby");
 const { esmPlugin } = require("./plugin.esm");
 const { cssPlugin } = require("./plugin.css");
-const cssModulesPlugin = require("esbuild-css-modules-plugin");
 
 const color = (n, v) => `\x1b[${n}m${v}\x1b[0m`;
 const defaultPath = join(process.cwd(), "src");
@@ -25,11 +24,7 @@ async function getBuildOptions(path) {
       "framer-motion",
       "react-resizable",
     ],
-    plugins: [
-      esmPlugin,
-      // cssPlugin({ inject: true }),
-      cssModulesPlugin({ inject: false }),
-    ],
+    plugins: [esmPlugin, cssPlugin({ inject: true })],
   };
 }
 

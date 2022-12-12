@@ -1,7 +1,6 @@
 // @ts-nocheck
-// import "@databricks/design-system/dist/index.css";
-// import "@databricks/design-system/dist/index-dark.css";
-import "./DuboisButton.modules.css";
+import "@databricks/design-system/dist/index.css";
+import "@databricks/design-system/dist/index-dark.css";
 import React from "react";
 import {
   Button,
