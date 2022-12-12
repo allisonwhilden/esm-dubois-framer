@@ -10,3 +10,4 @@
 // );
 
 export { DuboisButton } from "./DuboisButton";
+export * as DuboisStyle from "./DuboisStyle";
