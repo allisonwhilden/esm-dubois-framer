@@ -1,9 +1,9 @@
 // @ts-nocheck
 import "../node_modules/@databricks/design-system/dist/index.css";
 import React from "react";
-import { Button, DesignSystemProvider } from "@databricks/design-system";
+import { SplitButton, DesignSystemProvider } from "@databricks/design-system";
 
-export function DuboisButton({
+export function DuboisSplitButton({
   title = "Title",
   type = "default",
   danger = false,
@@ -15,7 +15,7 @@ export function DuboisButton({
   return (
     <div>
       <DesignSystemProvider>
-        <Button
+        <SplitButton
           danger={danger}
           type={type}
           disabled={disabled}
@@ -25,7 +25,7 @@ export function DuboisButton({
           onClick={onClick}
         >
           {title}
-        </Button>
+        </SplitButton>
       </DesignSystemProvider>
     </div>
   );

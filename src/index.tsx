@@ -9,5 +9,7 @@
 //   document.getElementById("root")
 // );
 
-export { DuboisButton } from "./DuboisButton";
 export * as DuboisStyle from "./DuboisStyle";
+export { DuboisButton } from "./DuboisButton";
+export { DuboisSplitButton } from "./DuboisSplitButton";
+export { DuboisIcon } from "./DuboisIcon";

@@ -6,6 +6,7 @@
     "@databricks/design-system": "^1.7.0",
     "@emotion/react": "11.7.1",
     "@emotion/styled": "11.8.1",
+    "@loadable/component": "^5.15.2",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
     "@testing-library/user-event": "^7.2.1",
