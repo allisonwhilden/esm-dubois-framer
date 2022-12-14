@@ -13,3 +13,5 @@ export * as DuboisStyle from "./DuboisStyle";
 export { DuboisButton } from "./DuboisButton";
 export { DuboisSplitButton } from "./DuboisSplitButton";
 export { DuboisIcon } from "./DuboisIcon";
+export { DuboisDropdownMenu } from "./DuboisDropdownMenu";
+export { DuboisSegmentedControl } from "./DuboisSegmentedControl";
