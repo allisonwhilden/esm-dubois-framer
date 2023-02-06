@@ -8,7 +8,12 @@ import {
 } from "@databricks/design-system";
 import loadable from "@loadable/component";
 
-export function DuboisIcon({ icon = "DataIcon", version = "v2" }) {
+export function DuboisIcon({
+  icon = "DataIcon",
+  version = "v2",
+  color = "default",
+  colorhex = "#FF3621",
+}) {
   const Icon = loadable(() => import("@databricks/design-system"), {
     resolveComponent: (components) => components[icon],
   });
@@ -17,7 +22,11 @@ export function DuboisIcon({ icon = "DataIcon", version = "v2" }) {
     <div>
       <DesignSystemProvider>
         <ApplyDesignSystemFlags flags={{ USE_NEW_ICONS: version === "v2" }}>
-          <Icon />
+          <Icon
+            color={
+              color === "default" ? "" : color === "custom" ? colorhex : color
+            }
+          />
         </ApplyDesignSystemFlags>
       </DesignSystemProvider>
     </div>
