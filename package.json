@@ -1,6 +1,6 @@
 {
   "name": "esm-dubois-framer",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "private": true,
   "dependencies": {
     "@databricks/design-system": "^1.7.0",
