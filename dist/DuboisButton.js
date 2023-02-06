@@ -74641,7 +74641,8 @@ function DuboisButton({
   onClick = () => {
   },
   showIcon = true,
-  icon = "DataIcon"
+  icon = "DataIcon",
+  version = "v2"
 }) {
   let Icon6 = "";
   if (showIcon) {
@@ -74649,7 +74650,9 @@ function DuboisButton({
       resolveComponent: (components) => components[icon]
     });
   }
-  return /* @__PURE__ */ React364.createElement("div", null, /* @__PURE__ */ React364.createElement(DesignSystemProvider, null, /* @__PURE__ */ React364.createElement(Button2, {
+  return /* @__PURE__ */ React364.createElement("div", null, /* @__PURE__ */ React364.createElement(DesignSystemProvider, null, /* @__PURE__ */ React364.createElement(ApplyDesignSystemFlags, {
+    flags: { USE_NEW_ICONS: version === "v2" }
+  }, /* @__PURE__ */ React364.createElement(Button2, {
     danger,
     type: type2,
     disabled,
@@ -74658,7 +74661,7 @@ function DuboisButton({
     block: true,
     onClick,
     icon: showIcon && /* @__PURE__ */ React364.createElement(Icon6, null)
-  }, title)));
+  }, title))));
 }
 export {
   DuboisButton
