@@ -1,7 +1,11 @@
 // @ts-nocheck
 import "../node_modules/@databricks/design-system/dist/index.css";
 import React from "react";
-import { Button, DesignSystemProvider } from "@databricks/design-system";
+import {
+  Button,
+  DesignSystemProvider,
+  ApplyDesignSystemFlags,
+} from "@databricks/design-system";
 import loadable from "@loadable/component";
 
 export function DuboisButton({
@@ -14,6 +18,7 @@ export function DuboisButton({
   onClick = () => {},
   showIcon = true,
   icon = "DataIcon",
+  version = "v2",
 }) {
   let Icon = "";
 
@@ -26,18 +31,20 @@ export function DuboisButton({
   return (
     <div>
       <DesignSystemProvider>
-        <Button
-          danger={danger}
-          type={type}
-          disabled={disabled}
-          size={size}
-          loading={loading}
-          block={true}
-          onClick={onClick}
-          icon={showIcon && <Icon />}
-        >
-          {title}
-        </Button>
+        <ApplyDesignSystemFlags flags={{ USE_NEW_ICONS: version === "v2" }}>
+          <Button
+            danger={danger}
+            type={type}
+            disabled={disabled}
+            size={size}
+            loading={loading}
+            block={true}
+            onClick={onClick}
+            icon={showIcon && <Icon />}
+          >
+            {title}
+          </Button>
+        </ApplyDesignSystemFlags>
       </DesignSystemProvider>
     </div>
   );
