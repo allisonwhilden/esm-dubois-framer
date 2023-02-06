@@ -13,5 +13,5 @@ export {
   DuboisSegmentedControl,
   DuboisSplitButton,
   DuboisStyle,
-  DuboisSwitch,
+  DuboisSwitch
 };
