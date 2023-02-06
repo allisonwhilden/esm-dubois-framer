@@ -2,6 +2,7 @@
 import "../node_modules/@databricks/design-system/dist/index.css";
 import React from "react";
 import { Button, DesignSystemProvider } from "@databricks/design-system";
+import loadable from "@loadable/component";
 
 export function DuboisButton({
   title = "Title",
@@ -11,7 +12,17 @@ export function DuboisButton({
   size = "default",
   loading = false,
   onClick = () => {},
+  showIcon = true,
+  icon = "DataIcon",
 }) {
+  let Icon = "";
+
+  if (showIcon) {
+    Icon = loadable(() => import("@databricks/design-system"), {
+      resolveComponent: (components) => components[icon],
+    });
+  }
+
   return (
     <div>
       <DesignSystemProvider>
@@ -23,6 +34,7 @@ export function DuboisButton({
           loading={loading}
           block={true}
           onClick={onClick}
+          icon={showIcon && <Icon />}
         >
           {title}
         </Button>
