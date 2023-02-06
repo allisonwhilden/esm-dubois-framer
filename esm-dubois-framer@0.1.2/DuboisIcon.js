@@ -74631,13 +74631,20 @@ lazy$2.lib = lazy$1;
 var loadable_esm_default = loadable$2;
 
 // src/DuboisIcon.tsx
-function DuboisIcon({ icon = "DataIcon", version = "v2" }) {
+function DuboisIcon({
+  icon = "DataIcon",
+  version = "v2",
+  color = "default",
+  colorhex = "#FF3621"
+}) {
   const Icon7 = loadable_esm_default(() => Promise.resolve().then(() => (init_dist2(), dist_exports)), {
     resolveComponent: (components) => components[icon]
   });
   return /* @__PURE__ */ React364.createElement("div", null, /* @__PURE__ */ React364.createElement(DesignSystemProvider, null, /* @__PURE__ */ React364.createElement(ApplyDesignSystemFlags, {
     flags: { USE_NEW_ICONS: version === "v2" }
-  }, /* @__PURE__ */ React364.createElement(Icon7, null))));
+  }, /* @__PURE__ */ React364.createElement(Icon7, {
+    color: color === "default" ? "" : color === "custom" ? colorhex : color
+  }))));
 }
 export {
   DuboisIcon
