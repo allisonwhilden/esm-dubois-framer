@@ -18,4 +18,5 @@ export { DuboisIcon } from "./DuboisIcon";
 export { DuboisDropdownMenu } from "./DuboisDropdownMenu";
 export { DuboisSegmentedControl } from "./DuboisSegmentedControl";
 export { DuboisBreadcrumb } from "./DuboisBreadcrumb";
+export { DuboisTag } from "./DuboisTag";
 // export { DuboisDialogCombobox } from "./DuboisDialogCombobox";
