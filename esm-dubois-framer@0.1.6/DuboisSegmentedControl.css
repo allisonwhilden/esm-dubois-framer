@@ -18450,6 +18450,7 @@ div.du-bois-light-typography-edit-content.du-bois-light-typography-rtl {
 }
 .du-bois-light-notification-notice {
   padding: 10px 40px 10px 32px;
+  box-shadow: 0px 4px 16px rgba(46, 56, 64, 0.12);
 }
 .du-bois-light-notification-notice .du-bois-light-notification-notice-icon {
   font-size: 16px;

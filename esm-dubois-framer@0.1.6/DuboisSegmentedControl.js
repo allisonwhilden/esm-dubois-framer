@@ -5282,10 +5282,9 @@ var require_regeneratorRuntime = __commonJS({
             return iterable;
           if (!isNaN(iterable.length)) {
             var i2 = -1, next = function next2() {
-              for (; ++i2 < iterable.length; ) {
+              for (; ++i2 < iterable.length; )
                 if (hasOwn.call(iterable, i2))
                   return next2.value = iterable[i2], next2.done = false, next2;
-              }
               return next2.value = void 0, next2.done = true, next2;
             };
             return next.next = next;
@@ -5330,9 +5329,8 @@ var require_regeneratorRuntime = __commonJS({
         return "[object Generator]";
       }), exports2.keys = function(val) {
         var object3 = Object(val), keys = [];
-        for (var key2 in object3) {
+        for (var key2 in object3)
           keys.push(key2);
-        }
         return keys.reverse(), function next() {
           for (; keys.length; ) {
             var key3 = keys.pop();
@@ -5345,9 +5343,8 @@ var require_regeneratorRuntime = __commonJS({
         constructor: Context2,
         reset: function reset(skipTempReset) {
           if (this.prev = 0, this.next = 0, this.sent = this._sent = void 0, this.done = false, this.delegate = null, this.method = "next", this.arg = void 0, this.tryEntries.forEach(resetTryEntry), !skipTempReset)
-            for (var name in this) {
+            for (var name in this)
               name.charAt(0) === "t" && hasOwn.call(this, name) && !isNaN(+name.slice(1)) && (this[name] = void 0);
-            }
         },
         stop: function stop() {
           this.done = true;
@@ -7702,7 +7699,7 @@ var require_mapValues = __commonJS({
 });
 
 // src/DuboisSegmentedControl.tsx
-import React126, { useState as useState23 } from "react";
+import React127, { useState as useState23 } from "react";
 
 // node_modules/@databricks/design-system/dist/index.js
 import {
@@ -7710,7 +7707,7 @@ import {
   createContext as createContext14,
   useContext as useContext31
 } from "react";
-import React__default, { createContext as createContext15, useMemo as useMemo19, useEffect as useEffect35, useContext as useContext32, useRef as useRef51, forwardRef as forwardRef44, useImperativeHandle as useImperativeHandle12, Children as Children6, useCallback as useCallback10, useState as useState22 } from "react";
+import React__default, { createContext as createContext15, useMemo as useMemo19, useEffect as useEffect35, useContext as useContext32, useRef as useRef51, forwardRef as forwardRef46, useState as useState22, useImperativeHandle as useImperativeHandle13, Children as Children6, useCallback as useCallback10 } from "react";
 
 // node_modules/@ant-design/icons/es/components/Context.js
 import { createContext } from "react";
@@ -7803,9 +7800,8 @@ function _iterableToArrayLimit(arr, i2) {
           return;
         _n = false;
       } else
-        for (; !(_n = (_s = _x.call(_i)).done) && (_arr.push(_s.value), _arr.length !== i2); _n = true) {
+        for (; !(_n = (_s = _x.call(_i)).done) && (_arr.push(_s.value), _arr.length !== i2); _n = true)
           ;
-        }
     } catch (err) {
       _d = true, _e = err;
     } finally {
@@ -7825,9 +7821,8 @@ function _iterableToArrayLimit(arr, i2) {
 function _arrayLikeToArray(arr, len) {
   if (len == null || len > arr.length)
     len = arr.length;
-  for (var i2 = 0, arr2 = new Array(len); i2 < len; i2++) {
+  for (var i2 = 0, arr2 = new Array(len); i2 < len; i2++)
     arr2[i2] = arr[i2];
-  }
   return arr2;
 }
 
@@ -8617,7 +8612,7 @@ function injectCSS(css3) {
   var csp = option.csp, prepend = option.prepend;
   var styleNode = document.createElement("style");
   styleNode.setAttribute(APPEND_ORDER, getOrder(prepend));
-  if (csp === null || csp === void 0 ? void 0 : csp.nonce) {
+  if (csp !== null && csp !== void 0 && csp.nonce) {
     styleNode.nonce = csp === null || csp === void 0 ? void 0 : csp.nonce;
   }
   styleNode.innerHTML = css3;
@@ -8662,7 +8657,7 @@ function updateCSS(css3, key2) {
   var existNode = findExistNode(key2, option);
   if (existNode) {
     var _option$csp, _option$csp2;
-    if (((_option$csp = option.csp) === null || _option$csp === void 0 ? void 0 : _option$csp.nonce) && existNode.nonce !== ((_option$csp2 = option.csp) === null || _option$csp2 === void 0 ? void 0 : _option$csp2.nonce)) {
+    if ((_option$csp = option.csp) !== null && _option$csp !== void 0 && _option$csp.nonce && existNode.nonce !== ((_option$csp2 = option.csp) === null || _option$csp2 === void 0 ? void 0 : _option$csp2.nonce)) {
       var _option$csp3;
       existNode.nonce = (_option$csp3 = option.csp) === null || _option$csp3 === void 0 ? void 0 : _option$csp3.nonce;
     }
@@ -9636,8 +9631,386 @@ function jsx(type2, props, key2) {
   return jsx$1(Emotion, createEmotionProps(type2, props), key2);
 }
 
-// node_modules/@databricks/design-system/dist/index.js
+// node_modules/@databricks/design-system/dist/useDesignSystemTheme-6e6f5867.js
 var import_chroma_js = __toModule(require_chroma());
+import "react";
+var borders = {
+  borderRadiusMd: 4
+};
+var borders$1 = {
+  ...borders
+};
+var colorPalettePrimary = {
+  primary: "#2272B4",
+  blue100: "#F0F8FF",
+  blue200: "#D7EDFE",
+  blue300: "#BAE1FC",
+  blue400: "#8ACAFF",
+  blue500: "#4299E0",
+  blue600: "#2272B4",
+  blue700: "#0E538B",
+  blue800: "#04355D",
+  green100: "#F3FCF6",
+  green200: "#D4F7DF",
+  green300: "#B1ECC5",
+  green400: "#8DDDA8",
+  green500: "#3CAA60",
+  green600: "#277C43",
+  green700: "#115026",
+  green800: "#093919",
+  white: "#FFFFFF",
+  grey100: "#F2F5F7",
+  grey200: "#E4ECF1",
+  grey300: "#CDDAE5",
+  grey400: "#BDCDDB",
+  grey500: "#8196A7",
+  grey600: "#5D7283",
+  grey700: "#44535F",
+  grey800: "#1F272D",
+  red100: "#FFF5F7",
+  red200: "#FDE2E8",
+  red300: "#FBD0D8",
+  red400: "#F792A6",
+  red500: "#E65B77",
+  red600: "#C82D4C",
+  red700: "#9E102C",
+  red800: "#630316",
+  yellow100: "#FFF9EB",
+  yellow200: "#FCEACA",
+  yellow300: "#F8D4A5",
+  yellow400: "#F2BE88",
+  yellow500: "#DE7921",
+  yellow600: "#BE501E",
+  yellow700: "#93320B",
+  yellow800: "#5F1B02"
+};
+var colorPaletteSecondary = {
+  brown: "#A6630C",
+  coral: "#C83243",
+  charcoal: "#5D7283",
+  indigo: "#434A93",
+  lemon: "#FACB66",
+  lime: "#308613",
+  pink: "#B45091",
+  purple: "#8A63BF",
+  teal: "#04867D",
+  turquoise: "#157CBC"
+};
+var lightColorList = {
+  backgroundPrimary: colorPalettePrimary.white,
+  actionDangerPrimaryBackgroundDefault: colorPalettePrimary.red600,
+  actionDangerPrimaryBackgroundHover: colorPalettePrimary.red700,
+  actionDangerPrimaryBackgroundPress: colorPalettePrimary.red800,
+  actionDangerDefaultBackgroundDefault: (0, import_chroma_js.default)(colorPalettePrimary.red600).alpha(0).hex(),
+  actionDangerDefaultBackgroundHover: (0, import_chroma_js.default)(colorPalettePrimary.red600).alpha(0.08).hex(),
+  actionDangerDefaultBackgroundPress: (0, import_chroma_js.default)(colorPalettePrimary.red600).alpha(0.16).hex(),
+  actionDangerDefaultBorderDefault: colorPalettePrimary.red600,
+  actionDangerDefaultBorderHover: colorPalettePrimary.red700,
+  actionDangerDefaultBorderPress: colorPalettePrimary.red800,
+  actionDangerDefaultTextDefault: colorPalettePrimary.red600,
+  actionDangerDefaultTextHover: colorPalettePrimary.red700,
+  actionDangerDefaultTextPress: colorPalettePrimary.red800,
+  actionDefaultBackgroundDefault: (0, import_chroma_js.default)(colorPalettePrimary.blue800).alpha(0).hex(),
+  actionDefaultBackgroundHover: (0, import_chroma_js.default)(colorPalettePrimary.blue600).alpha(0.08).hex(),
+  actionDefaultBackgroundPress: (0, import_chroma_js.default)(colorPalettePrimary.blue600).alpha(0.16).hex(),
+  actionDefaultBorderDefault: colorPalettePrimary.grey300,
+  actionDefaultBorderFocus: colorPalettePrimary.blue600,
+  actionDefaultBorderHover: colorPalettePrimary.blue700,
+  actionDefaultBorderPress: colorPalettePrimary.blue800,
+  actionDefaultTextDefault: colorPalettePrimary.grey800,
+  actionDefaultTextHover: colorPalettePrimary.blue700,
+  actionDefaultTextPress: colorPalettePrimary.blue800,
+  actionDisabledBackground: colorPalettePrimary.grey200,
+  actionDisabledText: colorPalettePrimary.grey400,
+  actionPrimaryBackgroundDefault: colorPalettePrimary.blue600,
+  actionPrimaryBackgroundHover: colorPalettePrimary.blue700,
+  actionPrimaryBackgroundPress: colorPalettePrimary.blue800,
+  actionPrimaryTextDefault: colorPalettePrimary.white,
+  actionPrimaryTextHover: colorPalettePrimary.white,
+  actionPrimaryTextPress: colorPalettePrimary.white,
+  actionTertiaryBackgroundDefault: (0, import_chroma_js.default)(colorPalettePrimary.blue600).alpha(0).hex(),
+  actionTertiaryBackgroundHover: (0, import_chroma_js.default)(colorPalettePrimary.blue600).alpha(0.08).hex(),
+  actionTertiaryBackgroundPress: (0, import_chroma_js.default)(colorPalettePrimary.blue600).alpha(0.16).hex(),
+  actionTertiaryTextDefault: colorPalettePrimary.blue600,
+  actionTertiaryTextHover: colorPalettePrimary.blue700,
+  actionTertiaryTextPress: colorPalettePrimary.blue800,
+  backgroundDanger: (0, import_chroma_js.default)(colorPalettePrimary.red100).alpha(0.08).hex(),
+  backgroundSecondary: colorPalettePrimary.grey100,
+  backgroundWarning: (0, import_chroma_js.default)(colorPalettePrimary.yellow100).alpha(0.08).hex(),
+  backgroundValidationDanger: colorPalettePrimary.red100,
+  backgroundValidationSuccess: colorPalettePrimary.blue100,
+  backgroundValidationWarning: colorPalettePrimary.yellow100,
+  border: colorPalettePrimary.grey300,
+  borderDecorative: colorPalettePrimary.grey300,
+  borderValidationDanger: colorPalettePrimary.red300,
+  borderValidationWarning: colorPalettePrimary.yellow300,
+  textPrimary: colorPalettePrimary.grey800,
+  textSecondary: colorPalettePrimary.grey600,
+  textPlaceholder: colorPalettePrimary.grey400,
+  textValidationDanger: colorPalettePrimary.red600,
+  textValidationSuccess: colorPalettePrimary.green600,
+  textValidationWarning: colorPalettePrimary.yellow600,
+  textValidationInfo: colorPalettePrimary.grey600,
+  overlayOverlay: (0, import_chroma_js.default)(colorPalettePrimary.grey100).alpha(0.72).hex(),
+  tagDefault: (0, import_chroma_js.default)(colorPalettePrimary.grey600).alpha(0.08).hex(),
+  tagBrown: colorPaletteSecondary.brown,
+  tagCoral: colorPaletteSecondary.coral,
+  tagCharcoal: colorPalettePrimary.grey600,
+  tagIndigo: colorPaletteSecondary.indigo,
+  tagLemon: colorPaletteSecondary.lemon,
+  tagLime: colorPaletteSecondary.lime,
+  tagPink: colorPaletteSecondary.pink,
+  tagPurple: colorPaletteSecondary.purple,
+  tagTeal: colorPaletteSecondary.teal,
+  tagTurquoise: colorPaletteSecondary.turquoise,
+  tagText: colorPalettePrimary.white,
+  tagHover: (0, import_chroma_js.default)(colorPalettePrimary.blue400).alpha(0.08).hex(),
+  tagPress: (0, import_chroma_js.default)(colorPalettePrimary.blue400).alpha(0.16).hex(),
+  tagIconHover: (0, import_chroma_js.default)(colorPalettePrimary.white).alpha(0.8).hex(),
+  tagIconPress: (0, import_chroma_js.default)(colorPalettePrimary.white).alpha(0.76).hex(),
+  typographyCodeBg: (0, import_chroma_js.default)(colorPalettePrimary.grey600).alpha(0.08).hex(),
+  tableRowHover: (0, import_chroma_js.default)(colorPalettePrimary.grey600).alpha(0.04).hex(),
+  tooltipBackgroundTooltip: colorPalettePrimary.grey800
+};
+var darkColorList = {
+  actionDangerPrimaryBackgroundDefault: (0, import_chroma_js.default)(colorPalettePrimary.red400).alpha(0.84).hex(),
+  actionDangerPrimaryBackgroundHover: (0, import_chroma_js.default)(colorPalettePrimary.red400).alpha(0.72).hex(),
+  actionDangerPrimaryBackgroundPress: (0, import_chroma_js.default)(colorPalettePrimary.red400).alpha(0.6).hex(),
+  actionDangerDefaultBackgroundDefault: (0, import_chroma_js.default)(colorPalettePrimary.red400).alpha(0).hex(),
+  actionDangerDefaultBackgroundHover: (0, import_chroma_js.default)(colorPalettePrimary.red400).alpha(0.08).hex(),
+  actionDangerDefaultBackgroundPress: (0, import_chroma_js.default)(colorPalettePrimary.red400).alpha(0.16).hex(),
+  actionDangerDefaultBorderDefault: colorPalettePrimary.red400,
+  actionDangerDefaultBorderHover: (0, import_chroma_js.default)(colorPalettePrimary.red400).alpha(0.72).hex(),
+  actionDangerDefaultBorderPress: (0, import_chroma_js.default)(colorPalettePrimary.red400).alpha(0.6).hex(),
+  actionDangerDefaultTextDefault: colorPalettePrimary.red400,
+  actionDangerDefaultTextHover: (0, import_chroma_js.default)(colorPalettePrimary.red400).alpha(0.72).hex(),
+  actionDangerDefaultTextPress: (0, import_chroma_js.default)(colorPalettePrimary.red400).alpha(0.6).hex(),
+  actionDefaultBackgroundDefault: (0, import_chroma_js.default)(colorPalettePrimary.blue400).alpha(0).hex(),
+  actionDefaultBackgroundHover: (0, import_chroma_js.default)(colorPalettePrimary.blue400).alpha(0.08).hex(),
+  actionDefaultBackgroundPress: (0, import_chroma_js.default)(colorPalettePrimary.blue400).alpha(0.16).hex(),
+  actionDefaultBorderDefault: (0, import_chroma_js.default)(colorPalettePrimary.white).alpha(0.6).hex(),
+  actionDefaultBorderFocus: (0, import_chroma_js.default)(colorPalettePrimary.blue400).alpha(0.84).hex(),
+  actionDefaultBorderHover: (0, import_chroma_js.default)(colorPalettePrimary.blue400).alpha(0.8).hex(),
+  actionDefaultBorderPress: (0, import_chroma_js.default)(colorPalettePrimary.blue400).alpha(0.76).hex(),
+  actionDefaultTextDefault: (0, import_chroma_js.default)(colorPalettePrimary.white).alpha(0.84).hex(),
+  actionDefaultTextHover: (0, import_chroma_js.default)(colorPalettePrimary.blue400).alpha(0.8).hex(),
+  actionDefaultTextPress: (0, import_chroma_js.default)(colorPalettePrimary.blue400).alpha(0.76).hex(),
+  actionDisabledBackground: (0, import_chroma_js.default)(colorPalettePrimary.white).alpha(0.24).hex(),
+  actionDisabledText: (0, import_chroma_js.default)(colorPalettePrimary.white).alpha(0.4).hex(),
+  actionPrimaryBackgroundDefault: (0, import_chroma_js.default)(colorPalettePrimary.blue400).alpha(0.84).hex(),
+  actionPrimaryBackgroundHover: (0, import_chroma_js.default)(colorPalettePrimary.blue400).alpha(0.8).hex(),
+  actionPrimaryBackgroundPress: (0, import_chroma_js.default)(colorPalettePrimary.blue400).alpha(0.76).hex(),
+  actionPrimaryTextDefault: colorPalettePrimary.grey800,
+  actionPrimaryTextHover: colorPalettePrimary.grey800,
+  actionPrimaryTextPress: colorPalettePrimary.grey800,
+  actionTertiaryBackgroundDefault: (0, import_chroma_js.default)(colorPalettePrimary.blue400).alpha(0).hex(),
+  actionTertiaryBackgroundHover: (0, import_chroma_js.default)(colorPalettePrimary.blue400).alpha(0.08).hex(),
+  actionTertiaryBackgroundPress: (0, import_chroma_js.default)(colorPalettePrimary.blue400).alpha(0.16).hex(),
+  actionTertiaryTextDefault: (0, import_chroma_js.default)(colorPalettePrimary.blue400).alpha(0.84).hex(),
+  actionTertiaryTextHover: (0, import_chroma_js.default)(colorPalettePrimary.blue400).alpha(0.8).hex(),
+  actionTertiaryTextPress: (0, import_chroma_js.default)(colorPalettePrimary.blue400).alpha(0.76).hex(),
+  backgroundPrimary: colorPalettePrimary.grey800,
+  backgroundSecondary: "#283035",
+  backgroundValidationDanger: "transparent",
+  backgroundValidationSuccess: "transparent",
+  backgroundValidationWarning: "transparent",
+  border: (0, import_chroma_js.default)(colorPalettePrimary.white).alpha(0.48).hex(),
+  borderDecorative: (0, import_chroma_js.default)(colorPalettePrimary.white).alpha(0.24).hex(),
+  borderValidationDanger: colorPalettePrimary.red300,
+  borderValidationWarning: colorPalettePrimary.yellow300,
+  textPrimary: (0, import_chroma_js.default)(colorPalettePrimary.white).alpha(0.84).hex(),
+  textSecondary: (0, import_chroma_js.default)(colorPalettePrimary.white).alpha(0.6).hex(),
+  textPlaceholder: (0, import_chroma_js.default)(colorPalettePrimary.grey400).alpha(0.84).hex(),
+  textValidationDanger: (0, import_chroma_js.default)(colorPalettePrimary.red400).alpha(0.84).hex(),
+  textValidationSuccess: (0, import_chroma_js.default)(colorPalettePrimary.green400).alpha(0.84).hex(),
+  textValidationWarning: (0, import_chroma_js.default)(colorPalettePrimary.yellow400).alpha(0.84).hex(),
+  textValidationInfo: (0, import_chroma_js.default)(colorPalettePrimary.white).alpha(0.6).hex(),
+  overlayOverlay: (0, import_chroma_js.default)(colorPalettePrimary.grey800).alpha(0.72).hex(),
+  tagDefault: (0, import_chroma_js.default)(colorPalettePrimary.white).alpha(0.16).hex(),
+  tagBrown: (0, import_chroma_js.default)(colorPaletteSecondary.brown).alpha(0.84).hex(),
+  tagCoral: (0, import_chroma_js.default)(colorPaletteSecondary.coral).alpha(0.84).hex(),
+  tagCharcoal: (0, import_chroma_js.default)(colorPalettePrimary.grey600).alpha(0.84).hex(),
+  tagIndigo: (0, import_chroma_js.default)(colorPaletteSecondary.indigo).alpha(0.84).hex(),
+  tagLemon: (0, import_chroma_js.default)(colorPaletteSecondary.lemon).alpha(0.84).hex(),
+  tagLime: (0, import_chroma_js.default)(colorPaletteSecondary.lime).alpha(0.84).hex(),
+  tagPink: (0, import_chroma_js.default)(colorPaletteSecondary.pink).alpha(0.84).hex(),
+  tagPurple: (0, import_chroma_js.default)(colorPaletteSecondary.purple).alpha(0.84).hex(),
+  tagTeal: (0, import_chroma_js.default)(colorPaletteSecondary.teal).alpha(0.84).hex(),
+  tagTurquoise: (0, import_chroma_js.default)(colorPaletteSecondary.turquoise).alpha(0.84).hex(),
+  tagText: (0, import_chroma_js.default)(colorPalettePrimary.white).alpha(0.84).hex(),
+  tagHover: (0, import_chroma_js.default)(colorPalettePrimary.blue400).alpha(0.08).hex(),
+  tagPress: (0, import_chroma_js.default)(colorPalettePrimary.blue400).alpha(0.16).hex(),
+  tagIconHover: (0, import_chroma_js.default)(colorPalettePrimary.white).alpha(0.8).hex(),
+  tagIconPress: (0, import_chroma_js.default)(colorPalettePrimary.white).alpha(0.76).hex(),
+  typographyCodeBg: (0, import_chroma_js.default)(colorPalettePrimary.white).alpha(0.16).hex(),
+  tableRowHover: (0, import_chroma_js.default)(colorPalettePrimary.white).alpha(0.16).hex(),
+  tooltipBackgroundTooltip: (0, import_chroma_js.default)(colorPalettePrimary.white).alpha(0.6).hex(),
+  backgroundDanger: "rgba(200,45,76,0.08)",
+  backgroundWarning: "rgba(222,121,33,0.08)"
+};
+var darkColors = {
+  ...darkColorList,
+  ...colorPalettePrimary,
+  ...colorPaletteSecondary
+};
+var lightColors = {
+  ...lightColorList,
+  ...colorPalettePrimary,
+  ...colorPaletteSecondary
+};
+function getSemanticColors(isDarkMode) {
+  return isDarkMode ? darkColors : lightColors;
+}
+var deprecatedColors = {
+  radioInteractiveAvailable: colorPalettePrimary.primary,
+  radioInteractiveHover: "#186099",
+  radioInteractivePress: "#0D4F85",
+  radioDisabled: "#A2AEB8",
+  radioDefaultBorder: "#64727D",
+  radioDefaultBackground: "#FFFFFF",
+  radioInteractiveHoverSecondary: "rgba(34, 115, 181, 0.08)",
+  radioInteractivePressSecondary: "rgba(34, 115, 181, 0.16)"
+};
+function getColors(isDarkMode) {
+  return {
+    ...deprecatedColors,
+    ...getSemanticColors(isDarkMode)
+  };
+}
+var antdVars = {
+  "ant-prefix": "du-bois"
+};
+var DEFAULT_SPACING_UNIT = 8;
+var MODAL_PADDING = 40;
+var spacing = {
+  xs: DEFAULT_SPACING_UNIT / 2,
+  sm: DEFAULT_SPACING_UNIT,
+  md: DEFAULT_SPACING_UNIT * 2,
+  lg: DEFAULT_SPACING_UNIT * 3
+};
+({
+  defaultPaddingLg: spacing.lg,
+  defaultPaddingMd: spacing.md,
+  defaultPaddingSm: spacing.sm,
+  defaultPaddingXs: spacing.sm,
+  defaultPaddingXss: spacing.xs,
+  paddingLg: spacing.md,
+  paddingMd: spacing.sm,
+  paddingSm: spacing.sm,
+  paddingXs: spacing.xs,
+  paddingXss: 0,
+  marginSm: 12,
+  marginLg: spacing.lg,
+  btnPaddingHorizontalBase: DEFAULT_SPACING_UNIT * 2,
+  btnPaddingHorizontalLg: DEFAULT_SPACING_UNIT * 2,
+  btnPaddingHorizontalSm: DEFAULT_SPACING_UNIT * 2,
+  inputPaddingHorizontal: DEFAULT_SPACING_UNIT * 1.5,
+  inputPaddingHorizontalBase: DEFAULT_SPACING_UNIT * 1.5,
+  inputPaddingHorizontalSm: DEFAULT_SPACING_UNIT * 1.5,
+  inputPaddingHorizontalLg: DEFAULT_SPACING_UNIT * 1.5,
+  inputPaddingVertical: spacing.xs + 1,
+  inputPaddingVerticalBase: spacing.xs + 1,
+  inputPaddingVerticalSm: spacing.xs + 1,
+  inputPaddingVerticalLg: spacing.xs + 1,
+  modalPadding: MODAL_PADDING,
+  modalLessPadding: MODAL_PADDING - 20,
+  modalHeaderPadding: `${MODAL_PADDING}px ${MODAL_PADDING}px ${MODAL_PADDING - 20}px`,
+  modalHeaderCloseSize: MODAL_PADDING * 2 + 22,
+  modalHeaderBorderWidth: 0,
+  modalBodyPadding: `0 ${MODAL_PADDING}px`,
+  modalFooterPaddingVertical: 0,
+  modalFooterPaddingHorizontal: 0,
+  modalFooterBorderWidth: 0,
+  switchPadding: 0,
+  switchHeight: 16,
+  switchMinWidth: 28,
+  switchPinSize: 14
+});
+var spacing$1 = spacing;
+var heightBase = 40;
+var borderWidth = 1;
+var antdGeneralVariables = {
+  classnamePrefix: antdVars["ant-prefix"],
+  iconfontCssPrefix: "anticon",
+  borderRadiusBase: 4,
+  borderWidth,
+  heightSm: 32,
+  heightBase,
+  iconSize: 24,
+  iconFontSize: 13,
+  iconFontSizeNew: 16,
+  buttonHeight: heightBase,
+  buttonInnerHeight: heightBase - spacing$1.sm * 2 - borderWidth * 2
+};
+var getShadowVariables = (isDarkMode) => {
+  if (isDarkMode) {
+    return {
+      shadowLow: "0px 4px 16px rgba(0, 0, 0, 0.12)",
+      shadowHigh: "0px 8px 24px rgba(0, 0, 0, 0.2);"
+    };
+  } else {
+    return {
+      shadowLow: "0px 4px 16px rgba(31, 39, 45, 0.12)",
+      shadowHigh: "0px 8px 24px rgba(31, 39, 45, 0.2)"
+    };
+  }
+};
+var generalVariables = antdGeneralVariables;
+var FONT_SIZE_BASE = 13;
+var antdTypography = {
+  fontSizeSm: 12,
+  fontSizeBase: FONT_SIZE_BASE,
+  fontSizeMd: FONT_SIZE_BASE,
+  fontSizeLg: 18,
+  fontSizeXl: 22,
+  fontSizeXxl: 32,
+  lineHeightSm: "16px",
+  lineHeightBase: "20px",
+  lineHeightMd: "20px",
+  lineHeightLg: "24px",
+  lineHeightXl: "28px",
+  lineHeightXxl: "40px",
+  typographyBoldFontWeight: 600
+};
+var typography = {
+  ...antdTypography
+};
+var defaultOptions = {
+  enableAnimation: false,
+  zIndexBase: 1e3
+};
+function getTheme3(isDarkMode) {
+  let options = arguments.length > 1 && arguments[1] !== void 0 ? arguments[1] : defaultOptions;
+  return {
+    colors: getColors(isDarkMode),
+    spacing: spacing$1,
+    general: {
+      ...generalVariables,
+      ...getShadowVariables(isDarkMode)
+    },
+    typography,
+    borders: borders$1,
+    isDarkMode,
+    themeName: isDarkMode ? "dark" : "default",
+    options
+  };
+}
+function getClassNamePrefix(theme) {
+  const antdThemeName = theme.isDarkMode ? "dark" : "light";
+  return `${theme.general.classnamePrefix}-${antdThemeName}`;
+}
+function getPrefixedClassNameFromTheme(theme, className) {
+  return [getClassNamePrefix(theme), className].filter(Boolean).join("-");
+}
+function useDesignSystemTheme() {
+  const emotionTheme = useTheme();
+  const theme = emotionTheme && emotionTheme.general ? emotionTheme : getTheme3(false);
+  return {
+    theme,
+    classNamePrefix: getClassNamePrefix(theme),
+    getPrefixedClassName: (className) => getPrefixedClassNameFromTheme(theme, className)
+  };
+}
 
 // node_modules/@babel/runtime/helpers/esm/classCallCheck.js
 function _classCallCheck(instance, Constructor) {
@@ -9767,7 +10140,8 @@ function omit(obj, fields) {
 
 // node_modules/rc-resize-observer/es/index.js
 import {
-  createElement as createElement21
+  createElement as createElement21,
+  forwardRef as forwardRef19
 } from "react";
 
 // node_modules/rc-util/es/Children/toArray.js
@@ -9834,10 +10208,10 @@ function composeRef() {
 function supportRef(nodeOrComponent) {
   var _type$prototype, _nodeOrComponent$prot;
   var type2 = (0, import_react_is2.isMemo)(nodeOrComponent) ? nodeOrComponent.type.type : nodeOrComponent.type;
-  if (typeof type2 === "function" && !((_type$prototype = type2.prototype) === null || _type$prototype === void 0 ? void 0 : _type$prototype.render)) {
+  if (typeof type2 === "function" && !((_type$prototype = type2.prototype) !== null && _type$prototype !== void 0 && _type$prototype.render)) {
     return false;
   }
-  if (typeof nodeOrComponent === "function" && !((_nodeOrComponent$prot = nodeOrComponent.prototype) === null || _nodeOrComponent$prot === void 0 ? void 0 : _nodeOrComponent$prot.render)) {
+  if (typeof nodeOrComponent === "function" && !((_nodeOrComponent$prot = nodeOrComponent.prototype) !== null && _nodeOrComponent$prot !== void 0 && _nodeOrComponent$prot.render)) {
     return false;
   }
   return true;
@@ -9847,21 +10221,27 @@ function supportRef(nodeOrComponent) {
 import {
   cloneElement,
   createElement as createElement20,
+  forwardRef as forwardRef18,
   isValidElement as isValidElement2,
   useCallback as useCallback2,
   useContext as useContext7,
   useEffect as useEffect2,
+  useImperativeHandle,
   useMemo as useMemo2,
   useRef as useRef4
 } from "react";
 
 // node_modules/rc-util/es/Dom/findDOMNode.js
+import React20 from "react";
 import ReactDOM from "react-dom";
 function findDOMNode(node) {
   if (node instanceof HTMLElement) {
     return node;
   }
-  return ReactDOM.findDOMNode(node);
+  if (node instanceof React20.Component) {
+    return ReactDOM.findDOMNode(node);
+  }
+  return null;
 }
 
 // node_modules/resize-observer-polyfill/dist/ResizeObserver.es.js
@@ -10423,7 +10803,7 @@ function Collection(_ref) {
 }
 
 // node_modules/rc-resize-observer/es/SingleObserver/index.js
-function SingleObserver(props) {
+function SingleObserver(props, ref) {
   var children = props.children, disabled = props.disabled;
   var elementRef = useRef4(null);
   var wrapperRef = useRef4(null);
@@ -10441,6 +10821,12 @@ function SingleObserver(props) {
   var mergedRef = useMemo2(function() {
     return composeRef(originRef, elementRef);
   }, [originRef, elementRef]);
+  var getDom = function getDom2() {
+    return findDOMNode(elementRef.current) || findDOMNode(wrapperRef.current);
+  };
+  useImperativeHandle(ref, function() {
+    return getDom();
+  });
   var propsRef = useRef4(props);
   propsRef.current = props;
   var onInternalResize = useCallback2(function(target) {
@@ -10472,7 +10858,7 @@ function SingleObserver(props) {
     }
   }, []);
   useEffect2(function() {
-    var currentElement = findDOMNode(elementRef.current) || findDOMNode(wrapperRef.current);
+    var currentElement = getDom();
     if (currentElement && !disabled) {
       observe(currentElement, onInternalResize);
     }
@@ -10486,10 +10872,15 @@ function SingleObserver(props) {
     ref: mergedRef
   }) : mergedChildren);
 }
+var RefSingleObserver = /* @__PURE__ */ forwardRef18(SingleObserver);
+if (true) {
+  RefSingleObserver.displayName = "SingleObserver";
+}
+var SingleObserver_default = RefSingleObserver;
 
 // node_modules/rc-resize-observer/es/index.js
 var INTERNAL_PREFIX_KEY = "rc-observer-key";
-function ResizeObserver2(props) {
+function ResizeObserver2(props, ref) {
   var children = props.children;
   var childNodes = typeof children === "function" ? [children] : toArray(children);
   if (true) {
@@ -10501,13 +10892,18 @@ function ResizeObserver2(props) {
   }
   return childNodes.map(function(child, index2) {
     var key2 = (child === null || child === void 0 ? void 0 : child.key) || "".concat(INTERNAL_PREFIX_KEY, "-").concat(index2);
-    return /* @__PURE__ */ createElement21(SingleObserver, _extends({}, props, {
-      key: key2
+    return /* @__PURE__ */ createElement21(SingleObserver_default, _extends({}, props, {
+      key: key2,
+      ref: index2 === 0 ? ref : void 0
     }), child);
   });
 }
-ResizeObserver2.Collection = Collection;
-var es_default = ResizeObserver2;
+var RefResizeObserver = /* @__PURE__ */ forwardRef19(ResizeObserver2);
+if (true) {
+  RefResizeObserver.displayName = "ResizeObserver";
+}
+RefResizeObserver.Collection = Collection;
+var es_default = RefResizeObserver;
 
 // node_modules/antd/es/config-provider/index.js
 import {
@@ -10519,7 +10915,7 @@ import {
 
 // node_modules/rc-field-form/es/index.js
 import {
-  forwardRef as forwardRef18
+  forwardRef as forwardRef20
 } from "react";
 
 // node_modules/@babel/runtime/helpers/esm/arrayWithoutHoles.js
@@ -13275,7 +13671,7 @@ import {
   createElement as createElement25,
   useContext as useContext11,
   useEffect as useEffect3,
-  useImperativeHandle,
+  useImperativeHandle as useImperativeHandle2,
   useMemo as useMemo3,
   useRef as useRef8
 } from "react";
@@ -13345,7 +13741,7 @@ var Form = function Form2(_ref, ref) {
   var formContext = useContext11(FormContext_default);
   var _useForm = useForm_default(form), _useForm2 = _slicedToArray(_useForm, 1), formInstance = _useForm2[0];
   var _formInstance$getInte = formInstance.getInternalHooks(HOOK_MARK), useSubscribe = _formInstance$getInte.useSubscribe, setInitialValues = _formInstance$getInte.setInitialValues, setCallbacks = _formInstance$getInte.setCallbacks, setValidateMessages = _formInstance$getInte.setValidateMessages, setPreserve = _formInstance$getInte.setPreserve;
-  useImperativeHandle(ref, function() {
+  useImperativeHandle2(ref, function() {
     return formInstance;
   });
   useEffect3(function() {
@@ -13422,7 +13818,7 @@ var Form = function Form2(_ref, ref) {
 var Form_default = Form;
 
 // node_modules/rc-field-form/es/index.js
-var InternalForm = /* @__PURE__ */ forwardRef18(Form_default);
+var InternalForm = /* @__PURE__ */ forwardRef20(Form_default);
 var RefForm = InternalForm;
 RefForm.FormProvider = FormProvider;
 RefForm.Field = Field_default;
@@ -13997,7 +14393,7 @@ import ReactDOM3 from "react-dom";
 import {
   cloneElement as cloneElement4,
   createElement as createElement33,
-  forwardRef as forwardRef19,
+  forwardRef as forwardRef21,
   isValidElement as isValidElement5,
   useCallback as useCallback4,
   useRef as useRef14
@@ -14443,7 +14839,7 @@ function genCSSMotion(config) {
   function isSupportTransition(props) {
     return !!(props.motionName && transitionSupport);
   }
-  var CSSMotion = /* @__PURE__ */ forwardRef19(function(props, ref) {
+  var CSSMotion = /* @__PURE__ */ forwardRef21(function(props, ref) {
     var _props$visible = props.visible, visible = _props$visible === void 0 ? true : _props$visible, _props$removeOnLeave = props.removeOnLeave, removeOnLeave = _props$removeOnLeave === void 0 ? true : _props$removeOnLeave, forceRender = props.forceRender, children = props.children, motionName = props.motionName, leavedClassName = props.leavedClassName, eventProps = props.eventProps;
     var supportMotion = isSupportTransition(props);
     var nodeRef = useRef15();
@@ -14473,11 +14869,11 @@ function genCSSMotion(config) {
     } else if (status === STATUS_NONE || !isSupportTransition(props)) {
       if (mergedVisible) {
         motionChildren = children(_objectSpread2({}, mergedProps), setNodeRef);
-      } else if (!removeOnLeave && renderedRef.current) {
+      } else if (!removeOnLeave && renderedRef.current && leavedClassName) {
         motionChildren = children(_objectSpread2(_objectSpread2({}, mergedProps), {}, {
           className: leavedClassName
         }), setNodeRef);
-      } else if (forceRender) {
+      } else if (forceRender || !removeOnLeave && !leavedClassName) {
         motionChildren = children(_objectSpread2(_objectSpread2({}, mergedProps), {}, {
           style: {
             display: "none"
@@ -14502,7 +14898,7 @@ function genCSSMotion(config) {
       }), setNodeRef);
     }
     if (/* @__PURE__ */ isValidElement5(motionChildren) && supportRef(motionChildren)) {
-      var _motionChildren = motionChildren, originNodeRef = _motionChildren.ref;
+      var _ref = motionChildren, originNodeRef = _ref.ref;
       if (!originNodeRef) {
         motionChildren = /* @__PURE__ */ cloneElement4(motionChildren, {
           ref: setNodeRef
@@ -14627,10 +15023,10 @@ function genCSSMotionList(transitionSupport) {
         args[_key] = arguments[_key];
       }
       _this = _super.call.apply(_super, [this].concat(args));
-      _this.state = {
+      _defineProperty(_assertThisInitialized(_this), "state", {
         keyEntities: []
-      };
-      _this.removeKey = function(removeKey) {
+      });
+      _defineProperty(_assertThisInitialized(_this), "removeKey", function(removeKey) {
         var keyEntities = _this.state.keyEntities;
         var nextKeyEntities = keyEntities.map(function(entity) {
           if (entity.key !== removeKey)
@@ -14646,7 +15042,7 @@ function genCSSMotionList(transitionSupport) {
           var status = _ref.status;
           return status !== STATUS_REMOVED;
         }).length;
-      };
+      });
       return _this;
     }
     _createClass(CSSMotionList2, [{
@@ -14706,9 +15102,9 @@ function genCSSMotionList(transitionSupport) {
     }]);
     return CSSMotionList2;
   }(Component6);
-  CSSMotionList.defaultProps = {
+  _defineProperty(CSSMotionList, "defaultProps", {
     component: "div"
-  };
+  });
   return CSSMotionList;
 }
 var CSSMotionList_default = genCSSMotionList(supportTransition);
@@ -15713,7 +16109,7 @@ function addEventListenerWrap(target, eventType, cb, option) {
 // node_modules/antd/es/select/index.js
 import {
   createElement as createElement65,
-  forwardRef as forwardRef34,
+  forwardRef as forwardRef36,
   useContext as useContext17,
   useMemo as useMemo15
 } from "react";
@@ -15730,10 +16126,10 @@ import {
 import {
   Fragment as Fragment6,
   createElement as createElement48,
-  forwardRef as forwardRef22,
+  forwardRef as forwardRef24,
   isValidElement as isValidElement6,
   useEffect as useEffect14,
-  useImperativeHandle as useImperativeHandle3,
+  useImperativeHandle as useImperativeHandle4,
   useRef as useRef26,
   useState as useState7
 } from "react";
@@ -15959,9 +16355,9 @@ var import_classnames13 = __toModule(require_classnames());
 var import_classnames11 = __toModule(require_classnames());
 import {
   createElement as createElement46,
-  forwardRef as forwardRef21,
+  forwardRef as forwardRef23,
   useCallback as useCallback7,
-  useImperativeHandle as useImperativeHandle2,
+  useImperativeHandle as useImperativeHandle3,
   useMemo as useMemo7
 } from "react";
 import { useRef as useRef25, useState as useState6 } from "react";
@@ -15969,11 +16365,11 @@ import { useRef as useRef25, useState as useState6 } from "react";
 // node_modules/rc-virtual-list/es/Filler.js
 import {
   createElement as createElement43,
-  forwardRef as forwardRef20
+  forwardRef as forwardRef22
 } from "react";
 var import_classnames9 = __toModule(require_classnames());
-var Filler = /* @__PURE__ */ forwardRef20(function(_ref, ref) {
-  var height = _ref.height, offset2 = _ref.offset, children = _ref.children, prefixCls = _ref.prefixCls, onInnerResize = _ref.onInnerResize;
+var Filler = /* @__PURE__ */ forwardRef22(function(_ref, ref) {
+  var height = _ref.height, offset2 = _ref.offset, children = _ref.children, prefixCls = _ref.prefixCls, onInnerResize = _ref.onInnerResize, innerProps = _ref.innerProps;
   var outerStyle = {};
   var innerStyle = {
     display: "flex",
@@ -16002,11 +16398,11 @@ var Filler = /* @__PURE__ */ forwardRef20(function(_ref, ref) {
         onInnerResize();
       }
     }
-  }, /* @__PURE__ */ createElement43("div", {
+  }, /* @__PURE__ */ createElement43("div", _extends({
     style: innerStyle,
     className: (0, import_classnames9.default)(_defineProperty({}, "".concat(prefixCls, "-holder-inner"), prefixCls)),
     ref
-  }, children)));
+  }, innerProps), children)));
 });
 Filler.displayName = "Filler";
 var Filler_default = Filler;
@@ -16395,7 +16791,7 @@ function useScrollTo(containerRef, data, heights, itemHeight, getKey2, collectHe
             collectHeight();
           }
           syncScroll2(times - 1, newTargetAlign);
-        });
+        }, 2);
       };
       syncScroll(3);
     }
@@ -16621,14 +17017,14 @@ function useMobileTouchMove(inVirtual, listRef, callback) {
 }
 
 // node_modules/rc-virtual-list/es/List.js
-var _excluded5 = ["prefixCls", "className", "height", "itemHeight", "fullHeight", "style", "data", "children", "itemKey", "virtual", "component", "onScroll", "onVisibleChange"];
+var _excluded5 = ["prefixCls", "className", "height", "itemHeight", "fullHeight", "style", "data", "children", "itemKey", "virtual", "component", "onScroll", "onVisibleChange", "innerProps"];
 var EMPTY_DATA = [];
 var ScrollStyle = {
   overflowY: "auto",
   overflowAnchor: "none"
 };
 function RawList(props, ref) {
-  var _props$prefixCls = props.prefixCls, prefixCls = _props$prefixCls === void 0 ? "rc-virtual-list" : _props$prefixCls, className = props.className, height = props.height, itemHeight = props.itemHeight, _props$fullHeight = props.fullHeight, fullHeight = _props$fullHeight === void 0 ? true : _props$fullHeight, style2 = props.style, data = props.data, children = props.children, itemKey = props.itemKey, virtual = props.virtual, _props$component = props.component, Component14 = _props$component === void 0 ? "div" : _props$component, onScroll = props.onScroll, onVisibleChange = props.onVisibleChange, restProps = _objectWithoutProperties(props, _excluded5);
+  var _props$prefixCls = props.prefixCls, prefixCls = _props$prefixCls === void 0 ? "rc-virtual-list" : _props$prefixCls, className = props.className, height = props.height, itemHeight = props.itemHeight, _props$fullHeight = props.fullHeight, fullHeight = _props$fullHeight === void 0 ? true : _props$fullHeight, style2 = props.style, data = props.data, children = props.children, itemKey = props.itemKey, virtual = props.virtual, _props$component = props.component, Component14 = _props$component === void 0 ? "div" : _props$component, onScroll = props.onScroll, onVisibleChange = props.onVisibleChange, innerProps = props.innerProps, restProps = _objectWithoutProperties(props, _excluded5);
   var useVirtual = !!(virtual !== false && height && itemHeight);
   var inVirtual = useVirtual && data && itemHeight * data.length > height;
   var _useState = useState6(0), _useState2 = _slicedToArray(_useState, 2), scrollTop = _useState2[0], setScrollTop = _useState2[1];
@@ -16786,7 +17182,7 @@ function RawList(props, ref) {
     var _scrollBarRef$current;
     (_scrollBarRef$current = scrollBarRef.current) === null || _scrollBarRef$current === void 0 ? void 0 : _scrollBarRef$current.delayHidden();
   });
-  useImperativeHandle2(ref, function() {
+  useImperativeHandle3(ref, function() {
     return {
       scrollTo
     };
@@ -16823,7 +17219,8 @@ function RawList(props, ref) {
     height: scrollHeight,
     offset: offset2,
     onInnerResize: collectHeight,
-    ref: fillerInnerRef
+    ref: fillerInnerRef,
+    innerProps
   }, listChildren)), useVirtual && /* @__PURE__ */ createElement46(ScrollBar, {
     ref: scrollBarRef,
     prefixCls,
@@ -16840,7 +17237,7 @@ function RawList(props, ref) {
     }
   }));
 }
-var List3 = /* @__PURE__ */ forwardRef21(RawList);
+var List3 = /* @__PURE__ */ forwardRef23(RawList);
 List3.displayName = "List";
 var List_default2 = List3;
 
@@ -16964,7 +17361,7 @@ var OptionList = function OptionList2(_ref, ref) {
       onToggleOpen(false);
     }
   };
-  useImperativeHandle3(ref, function() {
+  useImperativeHandle4(ref, function() {
     return {
       onKeyDown: function onKeyDown2(event) {
         var which = event.which;
@@ -17102,7 +17499,7 @@ var OptionList = function OptionList2(_ref, ref) {
     }, selected ? "\u2713" : null));
   }));
 };
-var RefOptionList = /* @__PURE__ */ forwardRef22(OptionList);
+var RefOptionList = /* @__PURE__ */ forwardRef24(OptionList);
 RefOptionList.displayName = "OptionList";
 var OptionList_default = RefOptionList;
 
@@ -17420,8 +17817,8 @@ function fillOptionsWithMissingValue(options, value, optionLabelProp, labelInVal
 import {
   cloneElement as cloneElement8,
   createElement as createElement62,
-  forwardRef as forwardRef33,
-  useImperativeHandle as useImperativeHandle9
+  forwardRef as forwardRef35,
+  useImperativeHandle as useImperativeHandle10
 } from "react";
 import { useState as useState15, useRef as useRef41, useEffect as useEffect25, useMemo as useMemo14 } from "react";
 
@@ -17495,8 +17892,8 @@ function useMergedState(defaultStateValue, option) {
 // node_modules/rc-select/es/Selector/index.js
 import {
   createElement as createElement55,
-  forwardRef as forwardRef27,
-  useImperativeHandle as useImperativeHandle4
+  forwardRef as forwardRef29,
+  useImperativeHandle as useImperativeHandle5
 } from "react";
 import { useRef as useRef31 } from "react";
 
@@ -17514,7 +17911,7 @@ var import_classnames16 = __toModule(require_classnames());
 import {
   createContext as createContext9,
   createElement as createElement51,
-  forwardRef as forwardRef25,
+  forwardRef as forwardRef27,
   useMemo as useMemo8
 } from "react";
 import { useState as useState8, useMemo as useMemo9, useCallback as useCallback9 } from "react";
@@ -17523,7 +17920,7 @@ import { useState as useState8, useMemo as useMemo9, useCallback as useCallback9
 var import_classnames14 = __toModule(require_classnames());
 import {
   createElement as createElement49,
-  forwardRef as forwardRef23,
+  forwardRef as forwardRef25,
   useEffect as useEffect15
 } from "react";
 var _excluded6 = ["prefixCls", "invalidate", "item", "renderItem", "responsive", "responsiveDisabled", "registerSize", "itemKey", "className", "style", "children", "display", "order", "component"];
@@ -17572,7 +17969,7 @@ function InternalItem(props, ref) {
   }
   return itemNode;
 }
-var Item2 = /* @__PURE__ */ forwardRef23(InternalItem);
+var Item2 = /* @__PURE__ */ forwardRef25(InternalItem);
 Item2.displayName = "Item";
 var Item_default = Item2;
 
@@ -17606,7 +18003,7 @@ function useBatchFrameState() {
 var import_classnames15 = __toModule(require_classnames());
 import {
   createElement as createElement50,
-  forwardRef as forwardRef24,
+  forwardRef as forwardRef26,
   useContext as useContext16
 } from "react";
 var _excluded7 = ["component"];
@@ -17629,7 +18026,7 @@ var InternalRawItem = function InternalRawItem2(props, ref) {
     className: (0, import_classnames15.default)(contextClassName, className)
   }, restContext, restProps)));
 };
-var RawItem = /* @__PURE__ */ forwardRef24(InternalRawItem);
+var RawItem = /* @__PURE__ */ forwardRef26(InternalRawItem);
 RawItem.displayName = "RawItem";
 var RawItem_default = RawItem;
 
@@ -17839,7 +18236,7 @@ function Overflow(props, ref) {
   }
   return overflowNode;
 }
-var ForwardOverflow = /* @__PURE__ */ forwardRef25(Overflow);
+var ForwardOverflow = /* @__PURE__ */ forwardRef27(Overflow);
 ForwardOverflow.displayName = "Overflow";
 ForwardOverflow.Item = RawItem_default;
 ForwardOverflow.RESPONSIVE = RESPONSIVE;
@@ -17854,7 +18251,7 @@ var import_classnames17 = __toModule(require_classnames());
 import {
   cloneElement as cloneElement6,
   createElement as createElement52,
-  forwardRef as forwardRef26
+  forwardRef as forwardRef28
 } from "react";
 var Input = function Input2(_ref, ref) {
   var _inputNode2, _inputNode2$props;
@@ -17919,7 +18316,7 @@ var Input = function Input2(_ref, ref) {
   }));
   return inputNode;
 };
-var RefInput = /* @__PURE__ */ forwardRef26(Input);
+var RefInput = /* @__PURE__ */ forwardRef28(Input);
 RefInput.displayName = "Input";
 var Input_default = RefInput;
 
@@ -18149,7 +18546,7 @@ var Selector = function Selector2(props, ref) {
   var inputRef = useRef31(null);
   var compositionStatusRef = useRef31(false);
   var prefixCls = props.prefixCls, multiple = props.multiple, open = props.open, mode = props.mode, showSearch = props.showSearch, tokenWithEnter = props.tokenWithEnter, onSearch = props.onSearch, onSearchSubmit = props.onSearchSubmit, onToggleOpen = props.onToggleOpen, onInputKeyDown = props.onInputKeyDown, domRef = props.domRef;
-  useImperativeHandle4(ref, function() {
+  useImperativeHandle5(ref, function() {
     return {
       focus: function focus() {
         inputRef.current.focus();
@@ -18249,15 +18646,15 @@ var Selector = function Selector2(props, ref) {
     onMouseDown
   }, selectNode);
 };
-var ForwardSelector = /* @__PURE__ */ forwardRef27(Selector);
+var ForwardSelector = /* @__PURE__ */ forwardRef29(Selector);
 ForwardSelector.displayName = "Selector";
 var Selector_default = ForwardSelector;
 
 // node_modules/rc-select/es/SelectTrigger.js
 import {
   createElement as createElement61,
-  forwardRef as forwardRef32,
-  useImperativeHandle as useImperativeHandle8,
+  forwardRef as forwardRef34,
+  useImperativeHandle as useImperativeHandle9,
   useMemo as useMemo11,
   useRef as useRef36
 } from "react";
@@ -18273,13 +18670,13 @@ import {
 import ReactDOM6 from "react-dom";
 
 // node_modules/rc-util/es/Portal.js
-import { useRef as useRef32, useEffect as useEffect19, forwardRef as forwardRef28, useImperativeHandle as useImperativeHandle5 } from "react";
+import { useRef as useRef32, useEffect as useEffect19, forwardRef as forwardRef30, useImperativeHandle as useImperativeHandle6 } from "react";
 import ReactDOM5 from "react-dom";
-var Portal = /* @__PURE__ */ forwardRef28(function(props, ref) {
+var Portal = /* @__PURE__ */ forwardRef30(function(props, ref) {
   var didUpdate = props.didUpdate, getContainer3 = props.getContainer, children = props.children;
   var parentRef = useRef32();
   var containerRef = useRef32();
-  useImperativeHandle5(ref, function() {
+  useImperativeHandle6(ref, function() {
     return {};
   });
   var initRef = useRef32(false);
@@ -18333,7 +18730,7 @@ function getAlignPopupClassName(builtinPlacements, prefixCls, align, isAlignPoin
 // node_modules/rc-trigger/es/Popup/index.js
 import {
   createElement as createElement59,
-  forwardRef as forwardRef31
+  forwardRef as forwardRef33
 } from "react";
 import { useState as useState13, useEffect as useEffect22 } from "react";
 
@@ -18397,37 +18794,11 @@ function Mask(props) {
 import {
   Children as Children2,
   createElement as createElement57,
-  forwardRef as forwardRef29,
+  forwardRef as forwardRef31,
   useEffect as useEffect21,
-  useImperativeHandle as useImperativeHandle6
+  useImperativeHandle as useImperativeHandle7
 } from "react";
 import { useRef as useRef34, useState as useState12 } from "react";
-
-// node_modules/rc-align/es/Align.js
-import React80 from "react";
-
-// node_modules/rc-util/es/Dom/isVisible.js
-var isVisible_default = function(element) {
-  if (!element) {
-    return false;
-  }
-  if (element instanceof HTMLElement && element.offsetParent) {
-    return true;
-  }
-  if (element instanceof SVGGraphicsElement && element.getBBox) {
-    var _element$getBBox = element.getBBox(), width = _element$getBBox.width, height = _element$getBBox.height;
-    if (width || height) {
-      return true;
-    }
-  }
-  if (element instanceof HTMLElement && element.getBoundingClientRect) {
-    var _element$getBoundingC = element.getBoundingClientRect(), _width = _element$getBoundingC.width, _height = _element$getBoundingC.height;
-    if (_width || _height) {
-      return true;
-    }
-  }
-  return false;
-};
 
 // node_modules/dom-align/dist-web/index.js
 function ownKeys2(object3, enumerableOnly) {
@@ -19379,8 +19750,107 @@ function alignPoint(el, tgtPoint, align) {
   }), pointInView);
 }
 
+// node_modules/rc-util/es/isEqual.js
+function isEqual(obj1, obj2) {
+  var shallow = arguments.length > 2 && arguments[2] !== void 0 ? arguments[2] : false;
+  var refSet = new Set();
+  function deepEqual(a, b) {
+    var level = arguments.length > 2 && arguments[2] !== void 0 ? arguments[2] : 1;
+    var circular = refSet.has(a);
+    warning_default(!circular, "Warning: There may be circular references");
+    if (circular) {
+      return false;
+    }
+    if (a === b) {
+      return true;
+    }
+    if (shallow && level > 1) {
+      return false;
+    }
+    refSet.add(a);
+    var newLevel = level + 1;
+    if (Array.isArray(a)) {
+      if (!Array.isArray(b) || a.length !== b.length) {
+        return false;
+      }
+      for (var i2 = 0; i2 < a.length; i2++) {
+        if (!deepEqual(a[i2], b[i2], newLevel)) {
+          return false;
+        }
+      }
+      return true;
+    }
+    if (a && b && _typeof(a) === "object" && _typeof(b) === "object") {
+      var keys = Object.keys(a);
+      if (keys.length !== Object.keys(b).length) {
+        return false;
+      }
+      return keys.every(function(key2) {
+        return deepEqual(a[key2], b[key2], newLevel);
+      });
+    }
+    return false;
+  }
+  return deepEqual(obj1, obj2);
+}
+var isEqual_default = isEqual;
+
+// node_modules/rc-util/es/Dom/isVisible.js
+var isVisible_default = function(element) {
+  if (!element) {
+    return false;
+  }
+  if (element instanceof HTMLElement && element.offsetParent) {
+    return true;
+  }
+  if (element instanceof SVGGraphicsElement && element.getBBox) {
+    var _element$getBBox = element.getBBox(), width = _element$getBBox.width, height = _element$getBBox.height;
+    if (width || height) {
+      return true;
+    }
+  }
+  if (element instanceof HTMLElement && element.getBoundingClientRect) {
+    var _element$getBoundingC = element.getBoundingClientRect(), _width = _element$getBoundingC.width, _height = _element$getBoundingC.height;
+    if (_width || _height) {
+      return true;
+    }
+  }
+  return false;
+};
+
 // node_modules/rc-align/es/Align.js
-var import_isEqual = __toModule(require_isEqual());
+import React81 from "react";
+
+// node_modules/rc-align/es/hooks/useBuffer.js
+import React80 from "react";
+var useBuffer_default = function(callback, buffer) {
+  var calledRef = React80.useRef(false);
+  var timeoutRef = React80.useRef(null);
+  function cancelTrigger() {
+    window.clearTimeout(timeoutRef.current);
+  }
+  function trigger(force) {
+    cancelTrigger();
+    if (!calledRef.current || force === true) {
+      if (callback(force) === false) {
+        return;
+      }
+      calledRef.current = true;
+      timeoutRef.current = window.setTimeout(function() {
+        calledRef.current = false;
+      }, buffer);
+    } else {
+      timeoutRef.current = window.setTimeout(function() {
+        calledRef.current = false;
+        trigger();
+      }, buffer);
+    }
+  }
+  return [trigger, function() {
+    calledRef.current = false;
+    cancelTrigger();
+  }];
+};
 
 // node_modules/rc-align/es/util.js
 function isSamePoint(prev, next) {
@@ -19431,37 +19901,6 @@ function monitorResize(element, callback) {
   };
 }
 
-// node_modules/rc-align/es/hooks/useBuffer.js
-import React79 from "react";
-var useBuffer_default = function(callback, buffer) {
-  var calledRef = React79.useRef(false);
-  var timeoutRef = React79.useRef(null);
-  function cancelTrigger() {
-    window.clearTimeout(timeoutRef.current);
-  }
-  function trigger(force) {
-    cancelTrigger();
-    if (!calledRef.current || force === true) {
-      if (callback() === false) {
-        return;
-      }
-      calledRef.current = true;
-      timeoutRef.current = window.setTimeout(function() {
-        calledRef.current = false;
-      }, buffer);
-    } else {
-      timeoutRef.current = window.setTimeout(function() {
-        calledRef.current = false;
-        trigger();
-      }, buffer);
-    }
-  }
-  return [trigger, function() {
-    calledRef.current = false;
-    cancelTrigger();
-  }];
-};
-
 // node_modules/rc-align/es/Align.js
 function getElement(func) {
   if (typeof func !== "function")
@@ -19475,105 +19914,90 @@ function getPoint(point) {
 }
 var Align = function Align2(_ref, ref) {
   var children = _ref.children, disabled = _ref.disabled, target = _ref.target, align = _ref.align, onAlign = _ref.onAlign, monitorWindowResize = _ref.monitorWindowResize, _ref$monitorBufferTim = _ref.monitorBufferTime, monitorBufferTime = _ref$monitorBufferTim === void 0 ? 0 : _ref$monitorBufferTim;
-  var cacheRef = React80.useRef({});
-  var nodeRef = React80.useRef();
-  var childNode = React80.Children.only(children);
-  var forceAlignPropsRef = React80.useRef({});
+  var cacheRef = React81.useRef({});
+  var nodeRef = React81.useRef();
+  var childNode = React81.Children.only(children);
+  var forceAlignPropsRef = React81.useRef({});
   forceAlignPropsRef.current.disabled = disabled;
   forceAlignPropsRef.current.target = target;
   forceAlignPropsRef.current.align = align;
   forceAlignPropsRef.current.onAlign = onAlign;
   var _useBuffer = useBuffer_default(function() {
     var _forceAlignPropsRef$c = forceAlignPropsRef.current, latestDisabled = _forceAlignPropsRef$c.disabled, latestTarget = _forceAlignPropsRef$c.target, latestAlign = _forceAlignPropsRef$c.align, latestOnAlign = _forceAlignPropsRef$c.onAlign;
-    if (!latestDisabled && latestTarget) {
-      var source = nodeRef.current;
-      var result;
-      var element = getElement(latestTarget);
-      var point = getPoint(latestTarget);
-      cacheRef.current.element = element;
-      cacheRef.current.point = point;
+    var source = nodeRef.current;
+    if (!latestDisabled && latestTarget && source) {
+      var _result;
+      var _element = getElement(latestTarget);
+      var _point = getPoint(latestTarget);
+      cacheRef.current.element = _element;
+      cacheRef.current.point = _point;
       cacheRef.current.align = latestAlign;
       var _document = document, activeElement = _document.activeElement;
-      if (element && isVisible_default(element)) {
-        result = alignElement(source, element, latestAlign);
-      } else if (point) {
-        result = alignPoint(source, point, latestAlign);
+      if (_element && isVisible_default(_element)) {
+        _result = alignElement(source, _element, latestAlign);
+      } else if (_point) {
+        _result = alignPoint(source, _point, latestAlign);
       }
       restoreFocus(activeElement, source);
-      if (latestOnAlign && result) {
-        latestOnAlign(source, result);
+      if (latestOnAlign && _result) {
+        latestOnAlign(source, _result);
       }
       return true;
     }
     return false;
   }, monitorBufferTime), _useBuffer2 = _slicedToArray(_useBuffer, 2), _forceAlign = _useBuffer2[0], cancelForceAlign = _useBuffer2[1];
-  var resizeMonitor = React80.useRef({
-    cancel: function cancel2() {
-    }
+  var _React$useState = React81.useState(), _React$useState2 = _slicedToArray(_React$useState, 2), element = _React$useState2[0], setElement = _React$useState2[1];
+  var _React$useState3 = React81.useState(), _React$useState4 = _slicedToArray(_React$useState3, 2), point = _React$useState4[0], setPoint = _React$useState4[1];
+  useLayoutEffect_default(function() {
+    setElement(getElement(target));
+    setPoint(getPoint(target));
   });
-  var sourceResizeMonitor = React80.useRef({
-    cancel: function cancel2() {
-    }
-  });
-  React80.useEffect(function() {
-    var element = getElement(target);
-    var point = getPoint(target);
-    if (nodeRef.current !== sourceResizeMonitor.current.element) {
-      sourceResizeMonitor.current.cancel();
-      sourceResizeMonitor.current.element = nodeRef.current;
-      sourceResizeMonitor.current.cancel = monitorResize(nodeRef.current, _forceAlign);
-    }
-    if (cacheRef.current.element !== element || !isSamePoint(cacheRef.current.point, point) || !(0, import_isEqual.default)(cacheRef.current.align, align)) {
+  React81.useEffect(function() {
+    if (cacheRef.current.element !== element || !isSamePoint(cacheRef.current.point, point) || !isEqual_default(cacheRef.current.align, align)) {
       _forceAlign();
-      if (resizeMonitor.current.element !== element) {
-        resizeMonitor.current.cancel();
-        resizeMonitor.current.element = element;
-        resizeMonitor.current.cancel = monitorResize(element, _forceAlign);
-      }
     }
   });
-  React80.useEffect(function() {
+  React81.useEffect(function() {
+    var cancelFn = monitorResize(nodeRef.current, _forceAlign);
+    return cancelFn;
+  }, [nodeRef.current]);
+  React81.useEffect(function() {
+    var cancelFn = monitorResize(element, _forceAlign);
+    return cancelFn;
+  }, [element]);
+  React81.useEffect(function() {
     if (!disabled) {
       _forceAlign();
     } else {
       cancelForceAlign();
     }
   }, [disabled]);
-  var winResizeRef = React80.useRef(null);
-  React80.useEffect(function() {
+  React81.useEffect(function() {
     if (monitorWindowResize) {
-      if (!winResizeRef.current) {
-        winResizeRef.current = addEventListenerWrap(window, "resize", _forceAlign);
-      }
-    } else if (winResizeRef.current) {
-      winResizeRef.current.remove();
-      winResizeRef.current = null;
+      var cancelFn = addEventListenerWrap(window, "resize", _forceAlign);
+      return cancelFn.remove;
     }
   }, [monitorWindowResize]);
-  React80.useEffect(function() {
+  React81.useEffect(function() {
     return function() {
-      resizeMonitor.current.cancel();
-      sourceResizeMonitor.current.cancel();
-      if (winResizeRef.current)
-        winResizeRef.current.remove();
       cancelForceAlign();
     };
   }, []);
-  React80.useImperativeHandle(ref, function() {
+  React81.useImperativeHandle(ref, function() {
     return {
       forceAlign: function forceAlign() {
         return _forceAlign(true);
       }
     };
   });
-  if (/* @__PURE__ */ React80.isValidElement(childNode)) {
-    childNode = /* @__PURE__ */ React80.cloneElement(childNode, {
+  if (/* @__PURE__ */ React81.isValidElement(childNode)) {
+    childNode = /* @__PURE__ */ React81.cloneElement(childNode, {
       ref: composeRef(childNode.ref, nodeRef)
     });
   }
   return childNode;
 };
-var RcAlign = /* @__PURE__ */ React80.forwardRef(Align);
+var RcAlign = /* @__PURE__ */ React81.forwardRef(Align);
 RcAlign.displayName = "Align";
 var Align_default = RcAlign;
 
@@ -19753,10 +20177,9 @@ function _regeneratorRuntime3() {
         return iterable;
       if (!isNaN(iterable.length)) {
         var i2 = -1, next = function next2() {
-          for (; ++i2 < iterable.length; ) {
+          for (; ++i2 < iterable.length; )
             if (hasOwn.call(iterable, i2))
               return next2.value = iterable[i2], next2.done = false, next2;
-          }
           return next2.value = void 0, next2.done = true, next2;
         };
         return next.next = next;
@@ -19801,9 +20224,8 @@ function _regeneratorRuntime3() {
     return "[object Generator]";
   }), exports.keys = function(val) {
     var object3 = Object(val), keys = [];
-    for (var key2 in object3) {
+    for (var key2 in object3)
       keys.push(key2);
-    }
     return keys.reverse(), function next() {
       for (; keys.length; ) {
         var key3 = keys.pop();
@@ -19816,9 +20238,8 @@ function _regeneratorRuntime3() {
     constructor: Context2,
     reset: function reset(skipTempReset) {
       if (this.prev = 0, this.next = 0, this.sent = this._sent = void 0, this.done = false, this.delegate = null, this.method = "next", this.arg = void 0, this.tryEntries.forEach(resetTryEntry), !skipTempReset)
-        for (var name in this) {
+        for (var name in this)
           name.charAt(0) === "t" && hasOwn.call(this, name) && !isNaN(+name.slice(1)) && (this[name] = void 0);
-        }
     },
     stop: function stop() {
       this.done = true;
@@ -20015,7 +20436,7 @@ var useStretchStyle_default = function(stretch) {
 };
 
 // node_modules/rc-trigger/es/Popup/PopupInner.js
-var PopupInner = /* @__PURE__ */ forwardRef29(function(props, ref) {
+var PopupInner = /* @__PURE__ */ forwardRef31(function(props, ref) {
   var visible = props.visible, prefixCls = props.prefixCls, className = props.className, style2 = props.style, children = props.children, zIndex = props.zIndex, stretch = props.stretch, destroyPopupOnHide = props.destroyPopupOnHide, forceRender = props.forceRender, align = props.align, point = props.point, getRootDomNode = props.getRootDomNode, getClassNameFromAlign = props.getClassNameFromAlign, onAlign = props.onAlign, onMouseEnter = props.onMouseEnter, onMouseLeave = props.onMouseLeave, onMouseDown = props.onMouseDown, onTouchStart = props.onTouchStart, onClick = props.onClick;
   var alignRef = useRef34();
   var elementRef = useRef34();
@@ -20086,7 +20507,7 @@ var PopupInner = /* @__PURE__ */ forwardRef29(function(props, ref) {
       goNextStatus();
     }
   }, [motion.motionName, status]);
-  useImperativeHandle6(ref, function() {
+  useImperativeHandle7(ref, function() {
     return {
       forceAlign,
       getElement: function getElement2() {
@@ -20148,17 +20569,17 @@ var PopupInner_default = PopupInner;
 import {
   Children as Children3,
   createElement as createElement58,
-  forwardRef as forwardRef30,
-  useImperativeHandle as useImperativeHandle7,
+  forwardRef as forwardRef32,
+  useImperativeHandle as useImperativeHandle8,
   useRef as useRef35
 } from "react";
 var import_classnames21 = __toModule(require_classnames());
-var MobilePopupInner = /* @__PURE__ */ forwardRef30(function(props, ref) {
+var MobilePopupInner = /* @__PURE__ */ forwardRef32(function(props, ref) {
   var prefixCls = props.prefixCls, visible = props.visible, zIndex = props.zIndex, children = props.children, _props$mobile = props.mobile;
   _props$mobile = _props$mobile === void 0 ? {} : _props$mobile;
   var popupClassName = _props$mobile.popupClassName, popupStyle = _props$mobile.popupStyle, _props$mobile$popupMo = _props$mobile.popupMotion, popupMotion = _props$mobile$popupMo === void 0 ? {} : _props$mobile$popupMo, popupRender = _props$mobile.popupRender, onClick = props.onClick;
   var elementRef = useRef35();
-  useImperativeHandle7(ref, function() {
+  useImperativeHandle8(ref, function() {
     return {
       forceAlign: function forceAlign() {
       },
@@ -20199,7 +20620,7 @@ var MobilePopupInner_default = MobilePopupInner;
 
 // node_modules/rc-trigger/es/Popup/index.js
 var _excluded9 = ["visible", "mobile"];
-var Popup = /* @__PURE__ */ forwardRef31(function(_ref, ref) {
+var Popup = /* @__PURE__ */ forwardRef33(function(_ref, ref) {
   var visible = _ref.visible, mobile = _ref.mobile, props = _objectWithoutProperties(_ref, _excluded9);
   var _useState = useState13(visible), _useState2 = _slicedToArray(_useState, 2), innerVisible = _useState2[0], serInnerVisible = _useState2[1];
   var _useState3 = useState13(false), _useState4 = _slicedToArray(_useState3, 2), inMobile = _useState4[0], setInMobile = _useState4[1];
@@ -20865,7 +21286,7 @@ var SelectTrigger = function SelectTrigger2(props, ref) {
   }, [dropdownMatchSelectWidth]);
   var mergedTransitionName = animation ? "".concat(dropdownPrefixCls, "-").concat(animation) : transitionName2;
   var popupRef = useRef36(null);
-  useImperativeHandle8(ref, function() {
+  useImperativeHandle9(ref, function() {
     return {
       getPopupElement: function getPopupElement() {
         return popupRef.current;
@@ -20899,7 +21320,7 @@ var SelectTrigger = function SelectTrigger2(props, ref) {
     onPopupVisibleChange
   }), children);
 };
-var RefSelectTrigger = /* @__PURE__ */ forwardRef32(SelectTrigger);
+var RefSelectTrigger = /* @__PURE__ */ forwardRef34(SelectTrigger);
 RefSelectTrigger.displayName = "SelectTrigger";
 var SelectTrigger_default = RefSelectTrigger;
 
@@ -21059,7 +21480,7 @@ function generateSelector(config) {
       setMobile(isMobile_default());
     }, []);
     var selectorDomRef = useRef41(null);
-    useImperativeHandle9(ref, function() {
+    useImperativeHandle10(ref, function() {
       var _selectorRef$current, _selectorRef$current2, _listRef$current;
       return {
         focus: (_selectorRef$current = selectorRef.current) === null || _selectorRef$current === void 0 ? void 0 : _selectorRef$current.focus,
@@ -21597,7 +22018,7 @@ function generateSelector(config) {
       "aria-live": "polite"
     }, "".concat(mergedRawValue.join(", "))), selectorNode, arrowNode, clearNode);
   }
-  var RefSelect2 = /* @__PURE__ */ forwardRef33(Select3);
+  var RefSelect2 = /* @__PURE__ */ forwardRef35(Select3);
   return RefSelect2;
 }
 
@@ -21852,7 +22273,7 @@ var InternalSelect = function InternalSelect2(_a, ref) {
     dropdownClassName: rcSelectRtlDropDownClassName
   }));
 };
-var SelectRef = /* @__PURE__ */ forwardRef34(InternalSelect);
+var SelectRef = /* @__PURE__ */ forwardRef36(InternalSelect);
 var Select2 = SelectRef;
 Select2.SECRET_COMBOBOX_MODE_DO_NOT_USE = SECRET_COMBOBOX_MODE_DO_NOT_USE;
 Select2.Option = Option_default;
@@ -21951,7 +22372,7 @@ var responsiveObserve_default = responsiveObserve;
 // node_modules/antd/es/tooltip/index.js
 import {
   createElement as createElement68,
-  forwardRef as forwardRef36,
+  forwardRef as forwardRef38,
   useContext as useContext18
 } from "react";
 
@@ -21959,7 +22380,7 @@ import {
 import {
   createElement as createElement67
 } from "react";
-import { useRef as useRef42, useImperativeHandle as useImperativeHandle10, forwardRef as forwardRef35 } from "react";
+import { useRef as useRef42, useImperativeHandle as useImperativeHandle11, forwardRef as forwardRef37 } from "react";
 
 // node_modules/rc-tooltip/es/placements.js
 var autoAdjustOverflow = {
@@ -22061,7 +22482,7 @@ var Content_default = Content;
 var Tooltip = function Tooltip2(props, ref) {
   var overlayClassName = props.overlayClassName, _props$trigger = props.trigger, trigger = _props$trigger === void 0 ? ["hover"] : _props$trigger, _props$mouseEnterDela = props.mouseEnterDelay, mouseEnterDelay = _props$mouseEnterDela === void 0 ? 0 : _props$mouseEnterDela, _props$mouseLeaveDela = props.mouseLeaveDelay, mouseLeaveDelay = _props$mouseLeaveDela === void 0 ? 0.1 : _props$mouseLeaveDela, overlayStyle = props.overlayStyle, _props$prefixCls = props.prefixCls, prefixCls = _props$prefixCls === void 0 ? "rc-tooltip" : _props$prefixCls, children = props.children, onVisibleChange = props.onVisibleChange, afterVisibleChange = props.afterVisibleChange, transitionName2 = props.transitionName, animation = props.animation, motion = props.motion, _props$placement = props.placement, placement = _props$placement === void 0 ? "right" : _props$placement, _props$align = props.align, align = _props$align === void 0 ? {} : _props$align, _props$destroyTooltip = props.destroyTooltipOnHide, destroyTooltipOnHide = _props$destroyTooltip === void 0 ? false : _props$destroyTooltip, defaultVisible = props.defaultVisible, getTooltipContainer = props.getTooltipContainer, overlayInnerStyle = props.overlayInnerStyle, restProps = _objectWithoutProperties(props, ["overlayClassName", "trigger", "mouseEnterDelay", "mouseLeaveDelay", "overlayStyle", "prefixCls", "children", "onVisibleChange", "afterVisibleChange", "transitionName", "animation", "motion", "placement", "align", "destroyTooltipOnHide", "defaultVisible", "getTooltipContainer", "overlayInnerStyle"]);
   var domRef = useRef42(null);
-  useImperativeHandle10(ref, function() {
+  useImperativeHandle11(ref, function() {
     return domRef.current;
   });
   var extraProps = _objectSpread2({}, restProps);
@@ -22113,7 +22534,7 @@ var Tooltip = function Tooltip2(props, ref) {
     mouseEnterDelay
   }, extraProps), children);
 };
-var Tooltip_default = /* @__PURE__ */ forwardRef35(Tooltip);
+var Tooltip_default = /* @__PURE__ */ forwardRef37(Tooltip);
 
 // node_modules/rc-tooltip/es/index.js
 var es_default10 = Tooltip_default;
@@ -22266,7 +22687,7 @@ function getDisabledCompatibleChildren(element, prefixCls) {
   }
   return element;
 }
-var Tooltip3 = /* @__PURE__ */ forwardRef36(function(props, ref) {
+var Tooltip3 = /* @__PURE__ */ forwardRef38(function(props, ref) {
   var _classNames2;
   var _React$useContext = useContext18(ConfigContext), getContextPopupContainer = _React$useContext.getPopupContainer, getPrefixCls = _React$useContext.getPrefixCls, direction = _React$useContext.direction;
   var _useMergedState = useMergedState(false, {
@@ -22385,7 +22806,7 @@ import {
   Fragment as Fragment9,
   createElement as createElement71,
   createRef as createRef5,
-  forwardRef as forwardRef37,
+  forwardRef as forwardRef39,
   isValidElement as isValidElement12,
   useContext as useContext19,
   useEffect as useEffect26,
@@ -22653,7 +23074,7 @@ var Wave = /* @__PURE__ */ function(_React$Component) {
 Wave.contextType = ConfigContext;
 
 // node_modules/antd/es/button/LoadingIcon.js
-import React103 from "react";
+import React104 from "react";
 var getCollapsedWidth = function getCollapsedWidth2() {
   return {
     width: 0,
@@ -22672,11 +23093,11 @@ var LoadingIcon = function LoadingIcon2(_ref) {
   var prefixCls = _ref.prefixCls, loading = _ref.loading, existIcon = _ref.existIcon;
   var visible = !!loading;
   if (existIcon) {
-    return /* @__PURE__ */ React103.createElement("span", {
+    return /* @__PURE__ */ React104.createElement("span", {
       className: "".concat(prefixCls, "-loading-icon")
-    }, /* @__PURE__ */ React103.createElement(LoadingOutlined_default2, null));
+    }, /* @__PURE__ */ React104.createElement(LoadingOutlined_default2, null));
   }
-  return /* @__PURE__ */ React103.createElement(es_default3, {
+  return /* @__PURE__ */ React104.createElement(es_default3, {
     visible,
     motionName: "".concat(prefixCls, "-loading-icon-motion"),
     removeOnLeave: true,
@@ -22688,11 +23109,11 @@ var LoadingIcon = function LoadingIcon2(_ref) {
     onLeaveActive: getCollapsedWidth
   }, function(_ref2, ref) {
     var className = _ref2.className, style2 = _ref2.style;
-    return /* @__PURE__ */ React103.createElement("span", {
+    return /* @__PURE__ */ React104.createElement("span", {
       className: "".concat(prefixCls, "-loading-icon"),
       style: style2,
       ref
-    }, /* @__PURE__ */ React103.createElement(LoadingOutlined_default2, {
+    }, /* @__PURE__ */ React104.createElement(LoadingOutlined_default2, {
       className
     }));
   });
@@ -22857,7 +23278,7 @@ var InternalButton = function InternalButton2(props, ref) {
   }
   return /* @__PURE__ */ createElement71(Wave, null, buttonNode);
 };
-var Button = /* @__PURE__ */ forwardRef37(InternalButton);
+var Button = /* @__PURE__ */ forwardRef39(InternalButton);
 Button.displayName = "Button";
 Button.Group = button_group_default;
 Button.__ANT_BUTTON = true;
@@ -22869,7 +23290,7 @@ var button_default2 = button_default;
 // node_modules/antd/es/radio/radio.js
 import {
   createElement as createElement72,
-  forwardRef as forwardRef38,
+  forwardRef as forwardRef40,
   useContext as useContext20,
   useEffect as useEffect27,
   useRef as useRef44
@@ -22877,7 +23298,7 @@ import {
 
 // node_modules/rc-checkbox/es/index.js
 var import_classnames29 = __toModule(require_classnames());
-import React105, { Component as Component13 } from "react";
+import React106, { Component as Component13 } from "react";
 var Checkbox = /* @__PURE__ */ function(_Component) {
   _inherits(Checkbox2, _Component);
   var _super = _createSuper(Checkbox2);
@@ -22942,10 +23363,10 @@ var Checkbox = /* @__PURE__ */ function(_Component) {
       }, {});
       var checked = this.state.checked;
       var classString = (0, import_classnames29.default)(prefixCls, className, (_classNames = {}, _defineProperty(_classNames, "".concat(prefixCls, "-checked"), checked), _defineProperty(_classNames, "".concat(prefixCls, "-disabled"), disabled), _classNames));
-      return /* @__PURE__ */ React105.createElement("span", {
+      return /* @__PURE__ */ React106.createElement("span", {
         className: classString,
         style: style2
-      }, /* @__PURE__ */ React105.createElement("input", _extends({
+      }, /* @__PURE__ */ React106.createElement("input", _extends({
         name,
         id: id2,
         type: type2,
@@ -22965,7 +23386,7 @@ var Checkbox = /* @__PURE__ */ function(_Component) {
         autoFocus,
         ref: this.saveInput,
         value
-      }, globalProps)), /* @__PURE__ */ React105.createElement("span", {
+      }, globalProps)), /* @__PURE__ */ React106.createElement("span", {
         className: "".concat(prefixCls, "-inner")
       }));
     }
@@ -23062,7 +23483,7 @@ var InternalRadio = function InternalRadio2(props, ref) {
     ref: mergedRef
   })), children !== void 0 ? /* @__PURE__ */ createElement72("span", null, children) : null);
 };
-var Radio = /* @__PURE__ */ forwardRef38(InternalRadio);
+var Radio = /* @__PURE__ */ forwardRef40(InternalRadio);
 Radio.displayName = "Radio";
 Radio.defaultProps = {
   type: "radio"
@@ -23073,11 +23494,11 @@ var radio_default = Radio;
 var import_classnames31 = __toModule(require_classnames());
 import {
   createElement as createElement73,
-  forwardRef as forwardRef39,
+  forwardRef as forwardRef41,
   memo,
   useContext as useContext21
 } from "react";
-var RadioGroup = /* @__PURE__ */ forwardRef39(function(props, ref) {
+var RadioGroup = /* @__PURE__ */ forwardRef41(function(props, ref) {
   var _React$useContext = useContext21(ConfigContext), getPrefixCls = _React$useContext.getPrefixCls, direction = _React$useContext.direction;
   var size = useContext21(SizeContext_default);
   var _useMergedState = useMergedState(props.defaultValue, {
@@ -23147,7 +23568,7 @@ var group_default = /* @__PURE__ */ memo(RadioGroup);
 // node_modules/antd/es/radio/radioButton.js
 import {
   createElement as createElement74,
-  forwardRef as forwardRef40,
+  forwardRef as forwardRef42,
   useContext as useContext22
 } from "react";
 var __rest7 = function(s, e2) {
@@ -23179,7 +23600,7 @@ var RadioButton = function RadioButton2(props, ref) {
     ref
   }));
 };
-var radioButton_default = /* @__PURE__ */ forwardRef40(RadioButton);
+var radioButton_default = /* @__PURE__ */ forwardRef42(RadioButton);
 
 // node_modules/antd/es/radio/index.js
 var Radio2 = radio_default;
@@ -23191,7 +23612,7 @@ var radio_default2 = Radio2;
 var import_classnames32 = __toModule(require_classnames());
 import {
   createElement as createElement75,
-  forwardRef as forwardRef41,
+  forwardRef as forwardRef43,
   useContext as useContext23,
   useEffect as useEffect29,
   useMemo as useMemo16,
@@ -23259,7 +23680,7 @@ var __rest8 = function(s, e2) {
 };
 var RowAligns = tuple("top", "middle", "bottom", "stretch");
 var RowJustify = tuple("start", "end", "center", "space-around", "space-between");
-var Row = /* @__PURE__ */ forwardRef41(function(props, ref) {
+var Row = /* @__PURE__ */ forwardRef43(function(props, ref) {
   var _classNames;
   var customizePrefixCls = props.prefixCls, justify = props.justify, align = props.align, className = props.className, style2 = props.style, children = props.children, _props$gutter = props.gutter, gutter = _props$gutter === void 0 ? 0 : _props$gutter, wrap = props.wrap, others = __rest8(props, ["prefixCls", "justify", "align", "className", "style", "children", "gutter", "wrap"]);
   var _React$useContext = useContext23(ConfigContext), getPrefixCls = _React$useContext.getPrefixCls, direction = _React$useContext.direction;
@@ -23341,7 +23762,7 @@ var row_default = Row;
 var import_classnames33 = __toModule(require_classnames());
 import {
   createElement as createElement76,
-  forwardRef as forwardRef42,
+  forwardRef as forwardRef44,
   useContext as useContext24
 } from "react";
 var __rest9 = function(s, e2) {
@@ -23367,7 +23788,7 @@ function parseFlex(flex) {
   return flex;
 }
 var sizes = ["xs", "sm", "md", "lg", "xl", "xxl"];
-var Col = /* @__PURE__ */ forwardRef42(function(props, ref) {
+var Col = /* @__PURE__ */ forwardRef44(function(props, ref) {
   var _classNames;
   var _React$useContext = useContext24(ConfigContext), getPrefixCls = _React$useContext.getPrefixCls, direction = _React$useContext.direction;
   var _React$useContext2 = useContext24(RowContext_default), gutter = _React$useContext2.gutter, wrap = _React$useContext2.wrap, supportFlexGap = _React$useContext2.supportFlexGap;
@@ -23428,9 +23849,9 @@ function useForceUpdate() {
 var import_classnames34 = __toModule(require_classnames());
 import {
   createElement as createElement78,
-  forwardRef as forwardRef43,
+  forwardRef as forwardRef45,
   useContext as useContext25,
-  useImperativeHandle as useImperativeHandle11
+  useImperativeHandle as useImperativeHandle12
 } from "react";
 import { useMemo as useMemo18 } from "react";
 
@@ -23676,7 +24097,7 @@ var InternalForm2 = function InternalForm3(props, ref) {
       itemRef: __INTERNAL__.itemRef
     };
   }, [name, labelAlign, labelCol, wrapperCol, layout, colon, mergedRequiredMark]);
-  useImperativeHandle11(ref, function() {
+  useImperativeHandle12(ref, function() {
     return wrapForm;
   });
   var onInternalFinishFailed = function onInternalFinishFailed2(errorInfo) {
@@ -23704,7 +24125,7 @@ var InternalForm2 = function InternalForm3(props, ref) {
     className: formClassName
   }))));
 };
-var Form3 = /* @__PURE__ */ forwardRef43(InternalForm2);
+var Form3 = /* @__PURE__ */ forwardRef45(InternalForm2);
 var Form_default2 = Form3;
 
 // node_modules/antd/es/form/FormItem.js
@@ -24338,380 +24759,12 @@ var unitless_browser_esm_default = unitlessKeys;
 
 // node_modules/@databricks/design-system/dist/index.js
 import { ResizableBox } from "react-resizable";
-var borders = {
-  borderRadiusMd: 4
-};
-var borders$1 = {
-  ...borders
-};
-var colorPalettePrimary = {
-  primary: "#2272B4",
-  blue100: "#F0F8FF",
-  blue200: "#D7EDFE",
-  blue300: "#BAE1FC",
-  blue400: "#8ACAFF",
-  blue500: "#4299E0",
-  blue600: "#2272B4",
-  blue700: "#0E538B",
-  blue800: "#04355D",
-  green100: "#F3FCF6",
-  green200: "#D4F7DF",
-  green300: "#B1ECC5",
-  green400: "#8DDDA8",
-  green500: "#3CAA60",
-  green600: "#277C43",
-  green700: "#115026",
-  green800: "#093919",
-  white: "#FFFFFF",
-  grey100: "#F2F5F7",
-  grey200: "#E4ECF1",
-  grey300: "#CDDAE5",
-  grey400: "#BDCDDB",
-  grey500: "#8196A7",
-  grey600: "#5D7283",
-  grey700: "#44535F",
-  grey800: "#1F272D",
-  red100: "#FFF5F7",
-  red200: "#FDE2E8",
-  red300: "#FBD0D8",
-  red400: "#F792A6",
-  red500: "#E65B77",
-  red600: "#C82D4C",
-  red700: "#9E102C",
-  red800: "#630316",
-  yellow100: "#FFF9EB",
-  yellow200: "#FCEACA",
-  yellow300: "#F8D4A5",
-  yellow400: "#F2BE88",
-  yellow500: "#DE7921",
-  yellow600: "#BE501E",
-  yellow700: "#93320B",
-  yellow800: "#5F1B02"
-};
-var colorPaletteSecondary = {
-  brown: "#A6630C",
-  coral: "#C83243",
-  charcoal: "#5D7283",
-  indigo: "#434A93",
-  lemon: "#FACB66",
-  lime: "#308613",
-  pink: "#B45091",
-  purple: "#8A63BF",
-  teal: "#04867D",
-  turquoise: "#157CBC"
-};
-var unstableColors = {
-  textValidationInfo: "#64727D",
-  backgroundValidationDanger: colorPalettePrimary.red100,
-  backgroundValidationSuccess: colorPalettePrimary.blue100,
-  backgroundValidationWarning: colorPalettePrimary.yellow100,
-  borderValidationDanger: colorPalettePrimary.red300,
-  borderValidationSuccess: colorPalettePrimary.blue300,
-  borderValidationWarning: colorPalettePrimary.yellow300
-};
-var lightColorList = {
-  backgroundPrimary: colorPalettePrimary.white,
-  actionDangerPrimaryBackgroundDefault: colorPalettePrimary.red600,
-  actionDangerPrimaryBackgroundHover: colorPalettePrimary.red700,
-  actionDangerPrimaryBackgroundPress: colorPalettePrimary.red800,
-  actionDangerDefaultBackgroundDefault: (0, import_chroma_js.default)(colorPalettePrimary.red600).alpha(0).hex(),
-  actionDangerDefaultBackgroundHover: (0, import_chroma_js.default)(colorPalettePrimary.red600).alpha(0.08).hex(),
-  actionDangerDefaultBackgroundPress: (0, import_chroma_js.default)(colorPalettePrimary.red600).alpha(0.16).hex(),
-  actionDangerDefaultBorderDefault: colorPalettePrimary.red600,
-  actionDangerDefaultBorderHover: colorPalettePrimary.red700,
-  actionDangerDefaultBorderPress: colorPalettePrimary.red800,
-  actionDangerDefaultTextDefault: colorPalettePrimary.red600,
-  actionDangerDefaultTextHover: colorPalettePrimary.red700,
-  actionDangerDefaultTextPress: colorPalettePrimary.red800,
-  actionDefaultBackgroundDefault: (0, import_chroma_js.default)(colorPalettePrimary.blue800).alpha(0).hex(),
-  actionDefaultBackgroundHover: (0, import_chroma_js.default)(colorPalettePrimary.blue600).alpha(0.08).hex(),
-  actionDefaultBackgroundPress: (0, import_chroma_js.default)(colorPalettePrimary.blue600).alpha(0.16).hex(),
-  actionDefaultBorderDefault: colorPalettePrimary.grey300,
-  actionDefaultBorderFocus: colorPalettePrimary.blue600,
-  actionDefaultBorderHover: colorPalettePrimary.blue700,
-  actionDefaultBorderPress: colorPalettePrimary.blue800,
-  actionDefaultTextDefault: colorPalettePrimary.grey800,
-  actionDefaultTextHover: colorPalettePrimary.blue700,
-  actionDefaultTextPress: colorPalettePrimary.blue800,
-  actionDisabledBackground: colorPalettePrimary.grey200,
-  actionDisabledText: colorPalettePrimary.grey400,
-  actionPrimaryBackgroundDefault: colorPalettePrimary.blue600,
-  actionPrimaryBackgroundHover: colorPalettePrimary.blue700,
-  actionPrimaryBackgroundPress: colorPalettePrimary.blue800,
-  actionPrimaryTextDefault: colorPalettePrimary.white,
-  actionPrimaryTextHover: colorPalettePrimary.white,
-  actionPrimaryTextPress: colorPalettePrimary.white,
-  actionTertiaryBackgroundDefault: (0, import_chroma_js.default)(colorPalettePrimary.blue600).alpha(0).hex(),
-  actionTertiaryBackgroundHover: (0, import_chroma_js.default)(colorPalettePrimary.blue600).alpha(0.08).hex(),
-  actionTertiaryBackgroundPress: (0, import_chroma_js.default)(colorPalettePrimary.blue600).alpha(0.16).hex(),
-  actionTertiaryTextDefault: colorPalettePrimary.blue600,
-  actionTertiaryTextHover: colorPalettePrimary.blue700,
-  actionTertiaryTextPress: colorPalettePrimary.blue800,
-  backgroundDanger: (0, import_chroma_js.default)(colorPalettePrimary.red100).alpha(0.08).hex(),
-  backgroundSecondary: colorPalettePrimary.grey100,
-  backgroundWarning: (0, import_chroma_js.default)(colorPalettePrimary.yellow100).alpha(0.08).hex(),
-  border: colorPalettePrimary.grey300,
-  borderDecorative: colorPalettePrimary.grey300,
-  textPrimary: colorPalettePrimary.grey800,
-  textSecondary: colorPalettePrimary.grey600,
-  textPlaceholder: colorPalettePrimary.grey400,
-  textValidationDanger: colorPalettePrimary.red600,
-  textValidationSuccess: colorPalettePrimary.green600,
-  textValidationWarning: colorPalettePrimary.yellow600,
-  overlayOverlay: (0, import_chroma_js.default)(colorPalettePrimary.grey100).alpha(0.72).hex(),
-  tagDefault: (0, import_chroma_js.default)(colorPalettePrimary.grey600).alpha(0.08).hex(),
-  tagBrown: colorPaletteSecondary.brown,
-  tagCoral: colorPaletteSecondary.coral,
-  tagCharcoal: colorPalettePrimary.grey600,
-  tagIndigo: colorPaletteSecondary.indigo,
-  tagLemon: colorPaletteSecondary.lemon,
-  tagLime: colorPaletteSecondary.lime,
-  tagPink: colorPaletteSecondary.pink,
-  tagPurple: colorPaletteSecondary.purple,
-  tagTeal: colorPaletteSecondary.teal,
-  tagTurquoise: colorPaletteSecondary.turquoise,
-  tagText: colorPalettePrimary.white,
-  tagHover: (0, import_chroma_js.default)(colorPalettePrimary.blue400).alpha(0.08).hex(),
-  tagPress: (0, import_chroma_js.default)(colorPalettePrimary.blue400).alpha(0.16).hex(),
-  tagIconHover: (0, import_chroma_js.default)(colorPalettePrimary.white).alpha(0.8).hex(),
-  tagIconPress: (0, import_chroma_js.default)(colorPalettePrimary.white).alpha(0.76).hex(),
-  typographyCodeBg: (0, import_chroma_js.default)(colorPalettePrimary.grey600).alpha(0.08).hex(),
-  tooltipBackgroundTooltip: colorPalettePrimary.grey800,
-  ...unstableColors
-};
-var darkColorList = {
-  actionDangerPrimaryBackgroundDefault: (0, import_chroma_js.default)(colorPalettePrimary.red400).alpha(0.84).hex(),
-  actionDangerPrimaryBackgroundHover: (0, import_chroma_js.default)(colorPalettePrimary.red400).alpha(0.72).hex(),
-  actionDangerPrimaryBackgroundPress: (0, import_chroma_js.default)(colorPalettePrimary.red400).alpha(0.6).hex(),
-  actionDangerDefaultBackgroundDefault: (0, import_chroma_js.default)(colorPalettePrimary.red400).alpha(0).hex(),
-  actionDangerDefaultBackgroundHover: (0, import_chroma_js.default)(colorPalettePrimary.red400).alpha(0.08).hex(),
-  actionDangerDefaultBackgroundPress: (0, import_chroma_js.default)(colorPalettePrimary.red400).alpha(0.16).hex(),
-  actionDangerDefaultBorderDefault: colorPalettePrimary.red400,
-  actionDangerDefaultBorderHover: (0, import_chroma_js.default)(colorPalettePrimary.red400).alpha(0.72).hex(),
-  actionDangerDefaultBorderPress: (0, import_chroma_js.default)(colorPalettePrimary.red400).alpha(0.6).hex(),
-  actionDangerDefaultTextDefault: colorPalettePrimary.red400,
-  actionDangerDefaultTextHover: (0, import_chroma_js.default)(colorPalettePrimary.red400).alpha(0.72).hex(),
-  actionDangerDefaultTextPress: (0, import_chroma_js.default)(colorPalettePrimary.red400).alpha(0.6).hex(),
-  actionDefaultBackgroundDefault: (0, import_chroma_js.default)(colorPalettePrimary.blue400).alpha(0).hex(),
-  actionDefaultBackgroundHover: (0, import_chroma_js.default)(colorPalettePrimary.blue400).alpha(0.08).hex(),
-  actionDefaultBackgroundPress: (0, import_chroma_js.default)(colorPalettePrimary.blue400).alpha(0.16).hex(),
-  actionDefaultBorderDefault: (0, import_chroma_js.default)(colorPalettePrimary.white).alpha(0.6).hex(),
-  actionDefaultBorderFocus: (0, import_chroma_js.default)(colorPalettePrimary.blue400).alpha(0.84).hex(),
-  actionDefaultBorderHover: (0, import_chroma_js.default)(colorPalettePrimary.blue400).alpha(0.8).hex(),
-  actionDefaultBorderPress: (0, import_chroma_js.default)(colorPalettePrimary.blue400).alpha(0.76).hex(),
-  actionDefaultTextDefault: (0, import_chroma_js.default)(colorPalettePrimary.white).alpha(0.84).hex(),
-  actionDefaultTextHover: (0, import_chroma_js.default)(colorPalettePrimary.blue400).alpha(0.8).hex(),
-  actionDefaultTextPress: (0, import_chroma_js.default)(colorPalettePrimary.blue400).alpha(0.76).hex(),
-  actionDisabledBackground: (0, import_chroma_js.default)(colorPalettePrimary.white).alpha(0.24).hex(),
-  actionDisabledText: (0, import_chroma_js.default)(colorPalettePrimary.white).alpha(0.4).hex(),
-  actionPrimaryBackgroundDefault: (0, import_chroma_js.default)(colorPalettePrimary.blue400).alpha(0.84).hex(),
-  actionPrimaryBackgroundHover: (0, import_chroma_js.default)(colorPalettePrimary.blue400).alpha(0.8).hex(),
-  actionPrimaryBackgroundPress: (0, import_chroma_js.default)(colorPalettePrimary.blue400).alpha(0.76).hex(),
-  actionPrimaryTextDefault: colorPalettePrimary.grey800,
-  actionPrimaryTextHover: colorPalettePrimary.grey800,
-  actionPrimaryTextPress: colorPalettePrimary.grey800,
-  actionTertiaryBackgroundDefault: (0, import_chroma_js.default)(colorPalettePrimary.blue400).alpha(0).hex(),
-  actionTertiaryBackgroundHover: (0, import_chroma_js.default)(colorPalettePrimary.blue400).alpha(0.08).hex(),
-  actionTertiaryBackgroundPress: (0, import_chroma_js.default)(colorPalettePrimary.blue400).alpha(0.16).hex(),
-  actionTertiaryTextDefault: (0, import_chroma_js.default)(colorPalettePrimary.blue400).alpha(0.84).hex(),
-  actionTertiaryTextHover: (0, import_chroma_js.default)(colorPalettePrimary.blue400).alpha(0.8).hex(),
-  actionTertiaryTextPress: (0, import_chroma_js.default)(colorPalettePrimary.blue400).alpha(0.76).hex(),
-  backgroundPrimary: colorPalettePrimary.grey800,
-  backgroundSecondary: (0, import_chroma_js.default)(colorPalettePrimary.white).alpha(0.04).hex(),
-  border: (0, import_chroma_js.default)(colorPalettePrimary.white).alpha(0.48).hex(),
-  borderDecorative: (0, import_chroma_js.default)(colorPalettePrimary.white).alpha(0.24).hex(),
-  textPrimary: (0, import_chroma_js.default)(colorPalettePrimary.white).alpha(0.84).hex(),
-  textSecondary: (0, import_chroma_js.default)(colorPalettePrimary.white).alpha(0.6).hex(),
-  textPlaceholder: (0, import_chroma_js.default)(colorPalettePrimary.grey400).alpha(0.84).hex(),
-  textValidationDanger: (0, import_chroma_js.default)(colorPalettePrimary.red400).alpha(0.84).hex(),
-  textValidationSuccess: (0, import_chroma_js.default)(colorPalettePrimary.green400).alpha(0.84).hex(),
-  textValidationWarning: (0, import_chroma_js.default)(colorPalettePrimary.yellow400).alpha(0.84).hex(),
-  overlayOverlay: (0, import_chroma_js.default)(colorPalettePrimary.grey800).alpha(0.72).hex(),
-  tagDefault: (0, import_chroma_js.default)(colorPalettePrimary.white).alpha(0.16).hex(),
-  tagBrown: (0, import_chroma_js.default)(colorPaletteSecondary.brown).alpha(0.84).hex(),
-  tagCoral: (0, import_chroma_js.default)(colorPaletteSecondary.coral).alpha(0.84).hex(),
-  tagCharcoal: (0, import_chroma_js.default)(colorPalettePrimary.grey600).alpha(0.84).hex(),
-  tagIndigo: (0, import_chroma_js.default)(colorPaletteSecondary.indigo).alpha(0.84).hex(),
-  tagLemon: (0, import_chroma_js.default)(colorPaletteSecondary.lemon).alpha(0.84).hex(),
-  tagLime: (0, import_chroma_js.default)(colorPaletteSecondary.lime).alpha(0.84).hex(),
-  tagPink: (0, import_chroma_js.default)(colorPaletteSecondary.pink).alpha(0.84).hex(),
-  tagPurple: (0, import_chroma_js.default)(colorPaletteSecondary.purple).alpha(0.84).hex(),
-  tagTeal: (0, import_chroma_js.default)(colorPaletteSecondary.teal).alpha(0.84).hex(),
-  tagTurquoise: (0, import_chroma_js.default)(colorPaletteSecondary.turquoise).alpha(0.84).hex(),
-  tagText: (0, import_chroma_js.default)(colorPalettePrimary.white).alpha(0.84).hex(),
-  tagHover: (0, import_chroma_js.default)(colorPalettePrimary.blue400).alpha(0.08).hex(),
-  tagPress: (0, import_chroma_js.default)(colorPalettePrimary.blue400).alpha(0.16).hex(),
-  tagIconHover: (0, import_chroma_js.default)(colorPalettePrimary.white).alpha(0.8).hex(),
-  tagIconPress: (0, import_chroma_js.default)(colorPalettePrimary.white).alpha(0.76).hex(),
-  typographyCodeBg: (0, import_chroma_js.default)(colorPalettePrimary.white).alpha(0.16).hex(),
-  tooltipBackgroundTooltip: (0, import_chroma_js.default)(colorPalettePrimary.white).alpha(0.6).hex(),
-  backgroundDanger: "rgba(200,45,76,0.08)",
-  backgroundWarning: "rgba(222,121,33,0.08)",
-  ...unstableColors
-};
-var darkColors = {
-  ...darkColorList,
-  ...colorPalettePrimary,
-  ...colorPaletteSecondary
-};
-var lightColors = {
-  ...lightColorList,
-  ...colorPalettePrimary,
-  ...colorPaletteSecondary
-};
-function getSemanticColors(theme) {
-  switch (theme) {
-    case "dark":
-      return {
-        ...darkColors
-      };
-    default:
-      return {
-        ...lightColors
-      };
-  }
-}
-var deprecatedColors = {
-  radioInteractiveAvailable: colorPalettePrimary.primary,
-  radioInteractiveHover: "#186099",
-  radioInteractivePress: "#0D4F85",
-  radioDisabled: "#A2AEB8",
-  radioDefaultBorder: "#64727D",
-  radioDefaultBackground: "#FFFFFF",
-  radioInteractiveHoverSecondary: "rgba(34, 115, 181, 0.08)",
-  radioInteractivePressSecondary: "rgba(34, 115, 181, 0.16)"
-};
-function getColors(theme) {
-  return {
-    ...deprecatedColors,
-    ...getSemanticColors(theme)
-  };
-}
-var antdVars = {
-  "ant-prefix": "du-bois"
-};
-var DEFAULT_SPACING_UNIT = 8;
-var MODAL_PADDING = 40;
-var spacing = {
-  xs: DEFAULT_SPACING_UNIT / 2,
-  sm: DEFAULT_SPACING_UNIT,
-  md: DEFAULT_SPACING_UNIT * 2,
-  lg: DEFAULT_SPACING_UNIT * 3
-};
-({
-  defaultPaddingLg: spacing.lg,
-  defaultPaddingMd: spacing.md,
-  defaultPaddingSm: spacing.sm,
-  defaultPaddingXs: spacing.sm,
-  defaultPaddingXss: spacing.xs,
-  paddingLg: spacing.md,
-  paddingMd: spacing.sm,
-  paddingSm: spacing.sm,
-  paddingXs: spacing.xs,
-  paddingXss: 0,
-  marginSm: 12,
-  marginLg: spacing.lg,
-  btnPaddingHorizontalBase: DEFAULT_SPACING_UNIT * 2,
-  btnPaddingHorizontalLg: DEFAULT_SPACING_UNIT * 2,
-  btnPaddingHorizontalSm: DEFAULT_SPACING_UNIT * 2,
-  inputPaddingHorizontal: DEFAULT_SPACING_UNIT * 1.5,
-  inputPaddingHorizontalBase: DEFAULT_SPACING_UNIT * 1.5,
-  inputPaddingHorizontalSm: DEFAULT_SPACING_UNIT * 1.5,
-  inputPaddingHorizontalLg: DEFAULT_SPACING_UNIT * 1.5,
-  inputPaddingVertical: spacing.xs + 1,
-  inputPaddingVerticalBase: spacing.xs + 1,
-  inputPaddingVerticalSm: spacing.xs + 1,
-  inputPaddingVerticalLg: spacing.xs + 1,
-  modalPadding: MODAL_PADDING,
-  modalLessPadding: MODAL_PADDING - 20,
-  modalHeaderPadding: "".concat(MODAL_PADDING, "px ").concat(MODAL_PADDING, "px ").concat(MODAL_PADDING - 20, "px"),
-  modalHeaderCloseSize: MODAL_PADDING * 2 + 22,
-  modalHeaderBorderWidth: 0,
-  modalBodyPadding: "0 ".concat(MODAL_PADDING, "px"),
-  modalFooterPaddingVertical: 0,
-  modalFooterPaddingHorizontal: 0,
-  modalFooterBorderWidth: 0,
-  switchPadding: 0,
-  switchHeight: 16,
-  switchMinWidth: 28,
-  switchPinSize: 14
-});
-var spacing$1 = spacing;
-var heightBase = 40;
-var borderWidth = 1;
-var antdGeneralVariables = {
-  classnamePrefix: antdVars["ant-prefix"],
-  iconfontCssPrefix: "anticon",
-  borderRadiusBase: 4,
-  borderWidth,
-  heightSm: 32,
-  heightBase,
-  iconSize: 24,
-  iconFontSize: 13,
-  iconFontSizeNew: 16,
-  buttonHeight: heightBase,
-  buttonInnerHeight: heightBase - spacing$1.sm * 2 - borderWidth * 2
-};
-var generalVariables = antdGeneralVariables;
-var FONT_SIZE_BASE = 13;
-var antdTypography = {
-  fontSizeSm: 12,
-  fontSizeBase: FONT_SIZE_BASE,
-  fontSizeMd: FONT_SIZE_BASE,
-  fontSizeLg: 18,
-  fontSizeXl: 22,
-  fontSizeXxl: 32,
-  lineHeightSm: "16px",
-  lineHeightBase: "20px",
-  lineHeightMd: "20px",
-  lineHeightLg: "24px",
-  lineHeightXl: "28px",
-  lineHeightXxl: "40px",
-  typographyBoldFontWeight: 600
-};
-var typography = {
-  ...antdTypography
-};
-var defaultOptions = {
-  enableAnimation: false,
-  zIndexBase: 1e3
-};
-function getTheme3(themeName) {
-  let options = arguments.length > 1 && arguments[1] !== void 0 ? arguments[1] : defaultOptions;
-  return {
-    colors: getColors(themeName),
-    spacing: spacing$1,
-    general: generalVariables,
-    typography,
-    borders: borders$1,
-    themeName,
-    options
-  };
-}
-var themeNameToAntdName = {
-  dark: "dark",
-  default: "light"
-};
-function getClassNamePrefix(theme) {
-  const antdThemeName = themeNameToAntdName[theme.themeName];
-  return "".concat(theme.general.classnamePrefix, "-").concat(antdThemeName);
-}
-function getPrefixedClassNameFromTheme(theme, className) {
-  return [getClassNamePrefix(theme), className].filter(Boolean).join("-");
-}
-function useDesignSystemTheme() {
-  const emotionTheme = useTheme();
-  const theme = emotionTheme && emotionTheme.general ? emotionTheme : getTheme3("default");
-  return {
-    theme,
-    classNamePrefix: getClassNamePrefix(theme),
-    getPrefixedClassName: (className) => getPrefixedClassNameFromTheme(theme, className)
-  };
-}
+var import_chroma_js2 = __toModule(require_chroma());
 var DuboisContextDefaults = {
   enableAnimation: false,
+  isDarkMode: false,
   theme: "default",
-  getPrefixCls: (suffix) => suffix ? "du-bois-".concat(suffix) : "du-bois",
+  getPrefixCls: (suffix) => suffix ? `du-bois-${suffix}` : "du-bois",
   flags: {}
 };
 var DesignSystemContext = /* @__PURE__ */ createContext15(DuboisContextDefaults);
@@ -24725,7 +24778,7 @@ function getAnimationCss(enableAnimation) {
     ...disableAnimationCss,
     "&::before": disableAnimationCss,
     "&::after": disableAnimationCss,
-    ["[class*=du-bois]:not(.".concat(DU_BOIS_ENABLE_ANIMATION_CLASSNAME, ", .").concat(DU_BOIS_ENABLE_ANIMATION_CLASSNAME, " *)")]: {
+    [`[class*=du-bois]:not(.${DU_BOIS_ENABLE_ANIMATION_CLASSNAME}, .${DU_BOIS_ENABLE_ANIMATION_CLASSNAME} *)`]: {
       ...disableAnimationCss,
       "&::before": disableAnimationCss,
       "&::after": disableAnimationCss
@@ -24737,33 +24790,38 @@ var AntDConfigProviderPropsContext = /* @__PURE__ */ React__default.createContex
 var DesignSystemProvider = (_ref) => {
   let {
     children,
+    isDarkMode = false,
     theme: themeName,
     enableAnimation = false,
     zIndexBase = 1e3,
     getPopupContainer,
-    flags = {}
+    flags = {
+      USE_NEW_ICONS: true
+    }
   } = _ref;
-  const theme = useMemo19(() => getTheme3(themeName || "default", {
+  const theme = useMemo19(() => getTheme3(isDarkMode, {
     enableAnimation,
     zIndexBase
-  }), [themeName, zIndexBase]);
+  }), [themeName, isDarkMode, zIndexBase]);
   const providerPropsContext = useMemo19(() => ({
+    isDarkMode,
     theme: themeName,
     enableAnimation,
     zIndexBase,
     getPopupContainer,
     flags
-  }), [themeName, enableAnimation, zIndexBase, getPopupContainer, flags]);
+  }), [themeName, isDarkMode, enableAnimation, zIndexBase, getPopupContainer, flags]);
   const classNamePrefix = getClassNamePrefix(theme);
   const value = useMemo19(() => {
     return {
       enableAnimation,
+      isDarkMode,
       theme: theme.themeName,
       getPrefixCls: (suffix) => getPrefixedClassNameFromTheme(theme, suffix),
       getPopupContainer,
       flags
     };
-  }, [enableAnimation, theme, getPopupContainer, flags]);
+  }, [enableAnimation, theme, isDarkMode, getPopupContainer, flags]);
   useEffect35(() => {
     return () => {
       notification_default.destroy();
@@ -24786,10 +24844,10 @@ var DesignSystemProvider = (_ref) => {
     })
   });
 };
-var DesignSystemAntDConfigProvider = (_ref3) => {
+var DesignSystemAntDConfigProvider = (_ref4) => {
   let {
     children
-  } = _ref3;
+  } = _ref4;
   const antdContext = useAntDConfigProviderContext();
   return jsx(config_provider_default, {
     ...antdContext,
@@ -24802,10 +24860,10 @@ var useAntDConfigProviderContext = () => {
     prefixCls: void 0
   };
 };
-var RestoreAntDDefaultClsPrefix = (_ref4) => {
+var RestoreAntDDefaultClsPrefix = (_ref5) => {
   let {
     children
-  } = _ref4;
+  } = _ref5;
   return jsx(config_provider_default, {
     prefixCls: "ant",
     children
@@ -24924,11 +24982,11 @@ function importantify(obj) {
       }
       if ((0, import_isNumber.default)(value)) {
         if (unitless_browser_esm_default[key2]) {
-          return "".concat(value, "!important");
+          return `${value}!important`;
         }
-        return "".concat(value, "px!important");
+        return `${value}px!important`;
       }
-      return "".concat(value, "!important");
+      return `${value}!important`;
     }
     if ((0, import_isNil.default)(value)) {
       return value;
@@ -24936,16 +24994,61 @@ function importantify(obj) {
     return importantify(value);
   });
 }
+var rotate = keyframes({
+  "0%": {
+    transform: "rotate(0deg) translate3d(0, 0, 0)"
+  },
+  "100%": {
+    transform: "rotate(360deg) translate3d(0, 0, 0)"
+  }
+});
+var cssSpinner = function(theme) {
+  let frameRate = arguments.length > 1 && arguments[1] !== void 0 ? arguments[1] : 60;
+  let delay = arguments.length > 2 && arguments[2] !== void 0 ? arguments[2] : 0;
+  const styles = {
+    animation: `${rotate} 1s steps(${frameRate}, end) infinite`,
+    color: theme.colors.textSecondary,
+    animationDelay: `${delay}s`
+  };
+  return /* @__PURE__ */ css(importantify(styles), false ? "" : ";label:cssSpinner;");
+};
+var Spinner = (_ref) => {
+  let {
+    frameRate,
+    size = "default",
+    delay,
+    className: propClass,
+    ...props
+  } = _ref;
+  const {
+    classNamePrefix,
+    theme
+  } = useDesignSystemTheme();
+  const sizeSuffix = size === "small" ? "-sm" : size === "large" ? "-lg" : "";
+  const sizeClass = sizeSuffix ? `${classNamePrefix}-spin${sizeSuffix}` : "";
+  const wrapperClass = `${propClass || ""} ${classNamePrefix}-spin ${sizeClass} ${classNamePrefix}-spin-spinning ${DU_BOIS_ENABLE_ANIMATION_CLASSNAME}`.trim();
+  const className = `${classNamePrefix}-spin-dot ${DU_BOIS_ENABLE_ANIMATION_CLASSNAME}`.trim();
+  return jsx("div", {
+    ...props,
+    className: wrapperClass,
+    children: jsx(LoadingIcon3, {
+      css: cssSpinner(theme, frameRate, delay),
+      className
+    })
+  });
+};
+var ZINDEX_OVERLAY = 10;
+var ZINDEX_CONTENT = ZINDEX_OVERLAY + 10;
 var getFormItemEmotionStyles = (_ref) => {
   let {
     theme,
     clsPrefix,
     useNewIcons
   } = _ref;
-  const clsFormItemLabel = ".".concat(clsPrefix, "-form-item-label");
-  const clsFormItemInputControl = ".".concat(clsPrefix, "-form-item-control-input");
-  const clsFormItemExplain = ".".concat(clsPrefix, "-form-item-explain");
-  const clsHasError = ".".concat(clsPrefix, "-form-item-has-error");
+  const clsFormItemLabel = `.${clsPrefix}-form-item-label`;
+  const clsFormItemInputControl = `.${clsPrefix}-form-item-control-input`;
+  const clsFormItemExplain = `.${clsPrefix}-form-item-explain`;
+  const clsHasError = `.${clsPrefix}-form-item-has-error`;
   return /* @__PURE__ */ css({
     [clsFormItemLabel]: {
       fontWeight: theme.typography.typographyBoldFontWeight,
@@ -24963,16 +25066,16 @@ var getFormItemEmotionStyles = (_ref) => {
     [clsFormItemInputControl]: {
       minHeight: theme.general.heightSm
     },
-    ["".concat(clsFormItemInputControl, " input[disabled]")]: {
+    [`${clsFormItemInputControl} input[disabled]`]: {
       border: "none"
     },
-    ["&".concat(clsHasError, " input:focus")]: importantify({
+    [`&${clsHasError} input:focus`]: importantify({
       boxShadow: "none"
     }),
     ...getAnimationCss(theme.options.enableAnimation)
   }, false ? "" : ";label:getFormItemEmotionStyles;");
 };
-var FormDubois = /* @__PURE__ */ forwardRef44(function Form5(_ref2, ref) {
+var FormDubois = /* @__PURE__ */ forwardRef46(function Form5(_ref2, ref) {
   let {
     dangerouslySetAntdProps,
     children,
@@ -25026,7 +25129,7 @@ var FormNamespace = /* @__PURE__ */ Object.assign(FormDubois, {
   List: form_default.List,
   useForm: form_default.useForm
 });
-var Option3 = /* @__PURE__ */ forwardRef44(function Option4(props, ref) {
+var Option3 = /* @__PURE__ */ forwardRef46(function Option4(props, ref) {
   const {
     dangerouslySetAntdProps,
     ...restProps
@@ -25038,11 +25141,38 @@ var Option3 = /* @__PURE__ */ forwardRef44(function Option4(props, ref) {
   });
 });
 Option3.isSelectOption = true;
+var DEFAULT_LOADING_SPIN_PROPS = {
+  indicator: jsx(Spinner, {})
+};
+var hideAnimation = keyframes({
+  from: {
+    opacity: 1
+  },
+  to: {
+    opacity: 0
+  }
+});
+var slideInAnimation = keyframes({
+  from: {
+    transform: "translateX(calc(100% + 12px))"
+  },
+  to: {
+    transform: "translateX(0)"
+  }
+});
+var swipeOutAnimation = keyframes({
+  from: {
+    transform: "translateX(var(--radix-toast-swipe-end-x))"
+  },
+  to: {
+    transform: "translateX(calc(100% + 12px))"
+  }
+});
 function getSegmentedControlGroupEmotionStyles(clsPrefix) {
-  const classSmallGroup = ".".concat(clsPrefix, "-radio-group-small");
-  const classButtonWrapper = ".".concat(clsPrefix, "-radio-button-wrapper");
+  const classSmallGroup = `.${clsPrefix}-radio-group-small`;
+  const classButtonWrapper = `.${clsPrefix}-radio-button-wrapper`;
   const styles = {
-    ["&".concat(classSmallGroup, " ").concat(classButtonWrapper)]: {
+    [`&${classSmallGroup} ${classButtonWrapper}`]: {
       padding: "0 12px"
     }
   };
@@ -25050,10 +25180,10 @@ function getSegmentedControlGroupEmotionStyles(clsPrefix) {
   return /* @__PURE__ */ css(importantStyles, false ? "" : ";label:getSegmentedControlGroupEmotionStyles;");
 }
 function getSegmentedControlButtonEmotionStyles(clsPrefix, theme) {
-  const classWrapperChecked = ".".concat(clsPrefix, "-radio-button-wrapper-checked");
-  const classWrapper = ".".concat(clsPrefix, "-radio-button-wrapper");
-  const classWrapperDisabled = ".".concat(clsPrefix, "-radio-button-wrapper-disabled");
-  const classButton = ".".concat(clsPrefix, "-radio-button");
+  const classWrapperChecked = `.${clsPrefix}-radio-button-wrapper-checked`;
+  const classWrapper = `.${clsPrefix}-radio-button-wrapper`;
+  const classWrapperDisabled = `.${clsPrefix}-radio-button-wrapper-disabled`;
+  const classButton = `.${clsPrefix}-radio-button`;
   const styles = {
     backgroundColor: theme.colors.actionDefaultBackgroundDefault,
     borderColor: theme.colors.actionDefaultBorderDefault,
@@ -25068,7 +25198,7 @@ function getSegmentedControlButtonEmotionStyles(clsPrefix, theme) {
       "::before": {
         backgroundColor: theme.colors.actionDefaultBorderHover
       },
-      ["& + ".concat(classWrapper, "::before")]: {
+      [`& + ${classWrapper}::before`]: {
         backgroundColor: theme.colors.actionDefaultBorderPress
       }
     },
@@ -25077,7 +25207,7 @@ function getSegmentedControlButtonEmotionStyles(clsPrefix, theme) {
       borderColor: theme.colors.actionDefaultBorderPress,
       color: theme.colors.actionTertiaryTextPress
     },
-    ["&".concat(classWrapperChecked)]: {
+    [`&${classWrapperChecked}`]: {
       backgroundColor: theme.colors.actionTertiaryBackgroundPress,
       borderColor: theme.colors.actionDefaultBorderPress,
       color: theme.colors.actionTertiaryTextPress,
@@ -25086,12 +25216,12 @@ function getSegmentedControlButtonEmotionStyles(clsPrefix, theme) {
         backgroundColor: theme.colors.actionDefaultBorderPress
       }
     },
-    ["&".concat(classWrapperChecked, ":focus-within")]: {
+    [`&${classWrapperChecked}:focus-within`]: {
       "::before": {
         width: 0
       }
     },
-    ["&".concat(classWrapperDisabled)]: {
+    [`&${classWrapperDisabled}`]: {
       color: theme.colors.actionDisabledText,
       backgroundColor: theme.colors.actionDisabledBackground,
       "&:hover": {
@@ -25103,7 +25233,7 @@ function getSegmentedControlButtonEmotionStyles(clsPrefix, theme) {
         backgroundColor: theme.colors.actionDisabledBackground
       }
     },
-    ["&".concat(classWrapper)]: {
+    [`&${classWrapper}`]: {
       padding: "0 16px",
       display: "inline-flex",
       verticalAlign: "middle",
@@ -25114,7 +25244,7 @@ function getSegmentedControlButtonEmotionStyles(clsPrefix, theme) {
         outlineColor: theme.colors.primary
       }
     },
-    ["&".concat(classWrapper, ", ").concat(classButton)]: {
+    [`&${classWrapper}, ${classButton}`]: {
       height: theme.general.heightSm,
       lineHeight: theme.typography.lineHeightBase,
       alignItems: "center"
@@ -25124,7 +25254,7 @@ function getSegmentedControlButtonEmotionStyles(clsPrefix, theme) {
   const importantStyles = importantify(styles);
   return /* @__PURE__ */ css(importantStyles, false ? "" : ";label:getSegmentedControlButtonEmotionStyles;");
 }
-var SegmentedControlButton = /* @__PURE__ */ forwardRef44(function SegmentedControlButton2(_ref, ref) {
+var SegmentedControlButton = /* @__PURE__ */ forwardRef46(function SegmentedControlButton2(_ref, ref) {
   let {
     dangerouslySetAntdProps,
     ...props
@@ -25142,7 +25272,7 @@ var SegmentedControlButton = /* @__PURE__ */ forwardRef44(function SegmentedCont
     })
   });
 });
-var SegmentedControlGroup = /* @__PURE__ */ forwardRef44(function SegmentedControlGroup2(_ref2, ref) {
+var SegmentedControlGroup = /* @__PURE__ */ forwardRef46(function SegmentedControlGroup2(_ref2, ref) {
   let {
     dangerouslySetAntdProps,
     ...props
@@ -25159,53 +25289,7 @@ var SegmentedControlGroup = /* @__PURE__ */ forwardRef44(function SegmentedContr
     })
   });
 });
-var rotate = keyframes({
-  "0%": {
-    transform: "rotate(0deg) translate3d(0, 0, 0)"
-  },
-  "100%": {
-    transform: "rotate(360deg) translate3d(0, 0, 0)"
-  }
-});
-var cssSpinner = function(theme) {
-  let frameRate = arguments.length > 1 && arguments[1] !== void 0 ? arguments[1] : 60;
-  let delay = arguments.length > 2 && arguments[2] !== void 0 ? arguments[2] : 0;
-  const styles = {
-    animation: "".concat(rotate, " 1s steps(").concat(frameRate, ", end) infinite"),
-    color: theme.colors.textSecondary,
-    animationDelay: "".concat(delay, "s")
-  };
-  return /* @__PURE__ */ css(importantify(styles), false ? "" : ";label:cssSpinner;");
-};
-var Spinner = (_ref) => {
-  let {
-    frameRate,
-    size = "default",
-    delay,
-    className: propClass,
-    ...props
-  } = _ref;
-  const {
-    classNamePrefix,
-    theme
-  } = useDesignSystemTheme();
-  const sizeSuffix = size === "small" ? "-sm" : size === "large" ? "-lg" : "";
-  const sizeClass = sizeSuffix ? "".concat(classNamePrefix, "-spin").concat(sizeSuffix) : "";
-  const wrapperClass = "".concat(propClass || "", " ").concat(classNamePrefix, "-spin ").concat(sizeClass, " ").concat(classNamePrefix, "-spin-spinning ").concat(DU_BOIS_ENABLE_ANIMATION_CLASSNAME).trim();
-  const className = "".concat(classNamePrefix, "-spin-dot ").concat(DU_BOIS_ENABLE_ANIMATION_CLASSNAME).trim();
-  return jsx("div", {
-    ...props,
-    className: wrapperClass,
-    children: jsx(LoadingIcon3, {
-      css: cssSpinner(theme, frameRate, delay),
-      className
-    })
-  });
-};
 var ButtonGroup3 = button_default2.Group;
-var DEFAULT_LOADING_SPIN_PROPS = {
-  indicator: jsx(Spinner, {})
-};
 
 // src/DuboisSegmentedControl.tsx
 function DuboisSegmentedControl({
@@ -25213,12 +25297,12 @@ function DuboisSegmentedControl({
   startingValue = 1
 }) {
   const [value, setValue2] = useState23(startingValue);
-  return /* @__PURE__ */ React126.createElement("div", null, /* @__PURE__ */ React126.createElement(DesignSystemProvider, null, /* @__PURE__ */ React126.createElement(SegmentedControlGroup, {
+  return /* @__PURE__ */ React127.createElement("div", null, /* @__PURE__ */ React127.createElement(DesignSystemProvider, null, /* @__PURE__ */ React127.createElement(SegmentedControlGroup, {
     value,
     onChange: (event) => {
       setValue2(event.target.value);
     }
-  }, values.map((value2, index2) => /* @__PURE__ */ React126.createElement(SegmentedControlButton, {
+  }, values.map((value2, index2) => /* @__PURE__ */ React127.createElement(SegmentedControlButton, {
     value: index2 + 1
   }, value2)))));
 }
