@@ -30629,9 +30629,7 @@ function DuboisDropdownMenu({
     icon: /* @__PURE__ */ React129.createElement(OverflowIcon, null)
   })
 }) {
-  return /* @__PURE__ */ React129.createElement("div", null, /* @__PURE__ */ React129.createElement(DesignSystemProvider, null, /* @__PURE__ */ React129.createElement(DropdownMenu.Root, {
-    defaultOpen: true
-  }, /* @__PURE__ */ React129.createElement(DropdownMenu.Trigger, {
+  return /* @__PURE__ */ React129.createElement("div", null, /* @__PURE__ */ React129.createElement(DesignSystemProvider, null, /* @__PURE__ */ React129.createElement(DropdownMenu.Root, null, /* @__PURE__ */ React129.createElement(DropdownMenu.Trigger, {
     asChild: true
   }, trigger), /* @__PURE__ */ React129.createElement(DropdownMenu.Content, null, items.map((item, index3) => {
     return /* @__PURE__ */ React129.createElement(DropdownMenu.Item, null, item);

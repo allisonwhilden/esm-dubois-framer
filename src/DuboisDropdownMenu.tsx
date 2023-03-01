@@ -16,7 +16,7 @@ export function DuboisDropdownMenu({
   return (
     <div>
       <DesignSystemProvider>
-        <DropdownMenu.Root defaultOpen={true}>
+        <DropdownMenu.Root>
           <DropdownMenu.Trigger asChild>{trigger}</DropdownMenu.Trigger>
           <DropdownMenu.Content>
             {items.map((item, index) => {
