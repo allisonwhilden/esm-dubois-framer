@@ -29484,6 +29484,46 @@ function LoadingIcon3(props) {
     component
   });
 }
+function SvgOverflowIconV1(props) {
+  return jsx("svg", {
+    width: "1em",
+    height: "1em",
+    viewBox: "0 0 24 24",
+    fill: "none",
+    xmlns: "http://www.w3.org/2000/svg",
+    ...props,
+    children: jsx("path", {
+      fillRule: "evenodd",
+      clipRule: "evenodd",
+      d: "M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm-2 8c0-1.1.9-2 2-2s2 .9 2 2-.9 2-2 2-2-.9-2-2z",
+      fill: "currentColor"
+    })
+  });
+}
+function SvgOverflowIconV2(props) {
+  return jsx("svg", {
+    width: "1em",
+    height: "1em",
+    viewBox: "0 0 16 16",
+    fill: "none",
+    xmlns: "http://www.w3.org/2000/svg",
+    ...props,
+    children: jsx("path", {
+      d: "M8 1a1.75 1.75 0 100 3.5A1.75 1.75 0 008 1zM8 6.25a1.75 1.75 0 100 3.5 1.75 1.75 0 000-3.5zM8 11.5A1.75 1.75 0 108 15a1.75 1.75 0 000-3.5z",
+      fill: "currentColor"
+    })
+  });
+}
+function OverflowIcon(props) {
+  const {
+    USE_NEW_ICONS
+  } = useDesignSystemFlags();
+  const component = USE_NEW_ICONS ? SvgOverflowIconV2 : SvgOverflowIconV1;
+  return jsx(Icon3, {
+    ...props,
+    component
+  });
+}
 function importantify(obj) {
   return (0, import_mapValues.default)(obj, (value, key2) => {
     if ((0, import_isString.default)(value) || (0, import_isNumber.default)(value) || (0, import_isBoolean.default)(value)) {
@@ -30583,10 +30623,19 @@ var swipeOutAnimation = keyframes({
 var ButtonGroup3 = button_default2.Group;
 
 // src/DuboisDropdownMenu.tsx
-function DuboisDropdownMenu() {
-  return /* @__PURE__ */ React129.createElement("div", null, /* @__PURE__ */ React129.createElement(DesignSystemProvider, null, /* @__PURE__ */ React129.createElement(DropdownMenu.Root, null, /* @__PURE__ */ React129.createElement(DropdownMenu.Trigger, {
+function DuboisDropdownMenu({
+  items = ["Apple", "Banana"],
+  trigger = /* @__PURE__ */ React129.createElement(Button2, {
+    icon: /* @__PURE__ */ React129.createElement(OverflowIcon, null)
+  })
+}) {
+  return /* @__PURE__ */ React129.createElement("div", null, /* @__PURE__ */ React129.createElement(DesignSystemProvider, null, /* @__PURE__ */ React129.createElement(DropdownMenu.Root, {
+    defaultOpen: true
+  }, /* @__PURE__ */ React129.createElement(DropdownMenu.Trigger, {
     asChild: true
-  }, /* @__PURE__ */ React129.createElement(Button2, null, "Can edit")), /* @__PURE__ */ React129.createElement(DropdownMenu.Content, null, /* @__PURE__ */ React129.createElement(DropdownMenu.Item, null, "Can edit"), /* @__PURE__ */ React129.createElement(DropdownMenu.Item, null, "Can view")))));
+  }, trigger), /* @__PURE__ */ React129.createElement(DropdownMenu.Content, null, items.map((item, index3) => {
+    return /* @__PURE__ */ React129.createElement(DropdownMenu.Item, null, item);
+  })))));
 }
 export {
   DuboisDropdownMenu
