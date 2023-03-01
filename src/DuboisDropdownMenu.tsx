@@ -6,19 +6,22 @@ import {
   DropdownMenu,
   Button,
   DesignSystemProvider,
+  OverflowIcon,
 } from "@databricks/design-system";
 
-export function DuboisDropdownMenu(): ReactNode {
+export function DuboisDropdownMenu({
+  items = ["Apple", "Banana"],
+  trigger = <Button icon={<OverflowIcon />} />,
+}): ReactNode {
   return (
     <div>
       <DesignSystemProvider>
-        <DropdownMenu.Root>
-          <DropdownMenu.Trigger asChild>
-            <Button>Can edit</Button>
-          </DropdownMenu.Trigger>
+        <DropdownMenu.Root defaultOpen={true}>
+          <DropdownMenu.Trigger asChild>{trigger}</DropdownMenu.Trigger>
           <DropdownMenu.Content>
-            <DropdownMenu.Item>Can edit</DropdownMenu.Item>
-            <DropdownMenu.Item>Can view</DropdownMenu.Item>
+            {items.map((item, index) => {
+              return <DropdownMenu.Item>{item}</DropdownMenu.Item>;
+            })}
           </DropdownMenu.Content>
         </DropdownMenu.Root>
       </DesignSystemProvider>
